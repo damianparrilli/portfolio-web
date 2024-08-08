@@ -1,15 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preload" href="./css/style.css" as="style">
     <title>Portfolio Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Manrope:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
     <link rel="icon" href="img/favicon.ico">
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="nav-menu" id="banner">
+            <ul class="nav-menu__buttons">
+                <li class="nav-menu__btn"><a href="#about">about</a></li>
+                <li class="nav-menu__btn"><a href="#skills">skills</a></li>
+                <li class="nav-menu__btn"><a href="#projects">projects</a></li>
+                <li class="nav-menu__btn"><a href="#contact">contact</a></li>
+            </ul>
+            <div class="contenido">
+                <img src="./img/animacion.gif" alt="Intro">
+                <div class="redes-banner">
+                    <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
+                        <svg class="redes-banner__ind" viewBox="0 0 83 83" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M0 0V82.1533H82.1533V0H0ZM20.1472 16.1509C23.4012 16.1875 26.6065 18.4323 26.746 22.3184C26.8155 25.774 23.8041 28.406 20.062 28.4859H19.9717C16.7502 28.4487 13.604 26.1475 13.4582 22.3184C13.5042 18.9013 16.3765 16.2319 20.1472 16.1509ZM55.0563 32.4772C58.6338 32.4994 62.0101 33.5607 64.784 36.3884C67.6666 39.6034 68.592 44.0362 68.6951 48.5429V69.0411H56.8815V49.9368C56.8552 46.3562 55.6287 42.0037 50.8895 41.8589C48.112 41.8885 46.1534 43.5024 44.8122 46.2012C44.4461 47.0699 44.3934 48.0684 44.376 49.0643V69.0411H32.5675C32.6127 59.0542 32.6748 49.068 32.6527 39.081C32.6527 36.2441 32.6254 34.3339 32.5675 33.3497H44.376V38.384C45.3783 36.9584 46.49 35.6065 47.9812 34.518C50.0038 33.0745 52.4336 32.5211 55.0563 32.4772ZM14.1552 33.3497H25.9637V69.0411H14.1552V33.3497Z" />
+                        </svg>
+
+                    </a>
+                    <a href="https://github.com/damiparrilli" target="_blank"><svg class="redes-banner__ind"
+                            viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.00012207" y="78.0005" width="82.1533" height="4.1528" />
+                            <rect y="6.10352e-05" width="82.1533" height="14.0834" />
+                            <rect y="6.10352e-05" width="10.2917" height="79.806" />
+                            <rect x="71.8616" width="10.2917" height="79.806" />
+                            <path
+                                d="M76.686 4.3903C73.7578 1.4621 70.2344 0 66.1118 0H16.2285C12.1058 0 8.58242 1.4621 5.65422 4.3903C2.72602 7.3185 1.26392 10.8419 1.26392 14.9646V64.8479C1.26392 68.9705 2.72602 72.4939 5.65422 75.4221C8.58242 78.3503 12.1058 79.8124 16.2285 79.8124H27.8694C28.6284 79.8124 29.1997 79.7845 29.5832 79.7325C30.0294 79.6431 30.4321 79.4051 30.7257 79.0574C31.1052 78.6579 31.2969 78.0787 31.2969 77.3197L31.269 73.7843C31.253 71.5312 31.245 69.7495 31.245 68.4312L30.0466 68.6389C29.2876 68.7787 28.3288 68.8387 27.1663 68.8227C25.9546 68.8003 24.7468 68.6787 23.555 68.4592C22.2862 68.2249 21.0919 67.6907 20.0715 66.9012C19.0029 66.0928 18.2058 64.978 17.7865 63.7053L17.2672 62.5069C16.8294 61.5615 16.2795 60.6723 15.6293 59.8583C14.8862 58.8876 14.1312 58.2324 13.3682 57.8849L13.0087 57.6252C12.758 57.4457 12.5299 57.2364 12.3296 57.002C12.1382 56.7845 11.9806 56.5394 11.8622 56.275C11.7583 56.0313 11.8462 55.8316 12.1218 55.6758C12.4015 55.516 12.9008 55.4401 13.6319 55.4401L14.6705 55.5999C15.3616 55.7357 16.2205 56.1511 17.2392 56.8422C18.2701 57.5451 19.1312 58.469 19.7599 59.5467C20.5589 60.9649 21.5176 62.0475 22.6442 62.7945C23.7707 63.5376 24.9052 63.9131 26.0478 63.9131C27.1903 63.9131 28.177 63.8252 29.0119 63.6534C29.8193 63.4865 30.6039 63.2236 31.3489 62.8704C31.6605 60.5534 32.5074 58.7637 33.8936 57.5174C32.0974 57.3413 30.3172 57.0288 28.5685 56.5826C26.8619 56.1138 25.2206 55.4333 23.6828 54.5572C22.0739 53.6813 20.6528 52.4977 19.5003 51.0737C18.3937 49.6875 17.4829 47.8699 16.7718 45.6208C16.0647 43.3677 15.7092 40.7671 15.7092 37.8229C15.7092 33.6324 17.0754 30.065 19.8118 27.1168C18.5335 23.9689 18.6534 20.4335 20.1754 16.5226C21.1821 16.207 22.6721 16.4427 24.6456 17.2217C26.619 18.0006 28.0651 18.6678 28.9839 19.2191C29.9028 19.7783 30.6378 20.2457 31.1931 20.6252C34.4408 19.7214 37.797 19.2671 41.1681 19.275C44.5997 19.275 47.9234 19.7264 51.1472 20.6252L53.1206 19.3789C54.6386 18.4674 56.2397 17.7023 57.9024 17.0938C59.74 16.3987 61.1382 16.211 62.113 16.5226C63.6709 20.4375 63.8068 23.9689 62.5244 27.1208C65.2609 30.065 66.6311 33.6324 66.6311 37.8269C66.6311 40.7711 66.2756 43.3797 65.5645 45.6448C64.8574 47.9138 63.9386 49.7315 62.812 51.1017C61.6392 52.5074 60.2122 53.6797 58.6055 54.5572C56.9277 55.492 55.2978 56.1671 53.7198 56.5826C51.9712 57.0302 50.191 57.3441 48.3948 57.5214C50.1924 59.0793 51.0953 61.5362 51.0953 64.8958V77.3197C51.0953 77.9069 51.1791 78.3823 51.3549 78.7458C51.4357 78.921 51.5509 79.0781 51.6937 79.2078C51.8364 79.3375 52.0038 79.4371 52.1858 79.5008C52.5693 79.6367 52.9049 79.7245 53.2005 79.7565C53.4961 79.7965 53.9196 79.8084 54.4709 79.8084H66.1118C70.2344 79.8084 73.7578 78.3463 76.686 75.4181C79.6102 72.4939 81.0764 68.9665 81.0764 64.8439V14.9646C81.0764 10.8419 79.6142 7.3185 76.686 4.3903Z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-menu" id="about">
+            <p class="nav-menu__title">about</p>
+            <ul class="nav-menu__buttons">
+                <li class="nav-menu__btn"><a href="#skills">skills</a></li>
+                <li class="nav-menu__btn"><a href="#projects">projects</a></li>
+                <li class="nav-menu__btn"><a href="#contact">contact</a></li>
+            </ul>
+
+            <div class="contenido">
+                <img src="./img/foto-1x1.png" alt="Foto">
+                <p>Me llamo Damián Parrilli, tengo 24 años, soy Licenciado en Diseño Multimedial y me desempeño tanto en
+                    diseño como en maquetado de páginas web. Mi enfoque principal esta siendo el desarrollo Front-end,
+                    pero quisiera poder mejorar mis herramientas de cara al Diseño Web. Gracias a los conocimientos
+                    adquiridos por mis estudios puedo desarrollar algunas tareas diversas al uso de herramientas de
+                    diseño como también de programación orientada a objetos. </p>
+            </div>
+        </div>
+        <div class="nav-menu" id="skills">
+            <p class="nav-menu__title">skills</p>
+            <ul class="nav-menu__buttons">
+                <li class="nav-menu__btn"><a href="#about">about</a></li>
+                <li class="nav-menu__btn"><a href="#projects">projects</a></li>
+                <li class="nav-menu__btn"><a href="#contact">contact</a></li>
+            </ul>
+            <div class="contenido"></div>
+        </div>
+        <div class="nav-menu" id="projects">
+            <p class="nav-menu__title">projects</p>
+            <ul class="nav-menu__buttons">
+                <li class="nav-menu__btn"><a href="#about">about</a></li>
+                <li class="nav-menu__btn"><a href="#skills">skills</a></li>
+                <li class="nav-menu__btn"><a href="#contact">contact</a></li>
+            </ul>
+            <div class="contenido"></div>
+        </div>
+        <div class="nav-menu nav-menu__contact" id="contact">
+            <p class="nav-menu__title">contact</p>
+            <ul class="nav-menu__buttons">
+                <li class="nav-menu__btn"><a href="#about">about</a></li>
+                <li class="nav-menu__btn"><a href="#skills">skills</a></li>
+                <li class="nav-menu__btn"><a href="#projects">projects</a></li>
+            </ul>
+            <div class="contenido contenido__contact">
+
+            </div>
+        </div>
+    </div>
     <script src="./js/main.js"></script>
 </body>
+
 </html>

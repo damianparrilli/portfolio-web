@@ -1,0 +1,87 @@
+@use 'manager';
+
+.nav-menu{
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    border: 80px solid manager.$main-color;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    &::before{
+        content: "";
+    position: absolute;
+    width: calc(100% + 80px); 
+    height: calc(100% + 80px); 
+    top: -40px; 
+    left: -40px; 
+    border: 1px solid manager.$secondary-color; 
+    }
+
+
+
+
+    &__buttons{
+        position: absolute;
+        bottom: -52.5px;
+        font-size: 1.2em;
+        
+        z-index: 2;
+        @include manager.flex-center(row, center);
+        list-style: none;
+        gap: 35px;
+        color: manager.$secondary-color;
+        
+        
+
+        a{
+            padding: 0 25px;
+            color: inherit;
+            background-color: manager.$main-color;
+            text-decoration: none;
+            
+            &:hover{
+                color: manager.$hover-nav-color;
+            }
+        }
+
+        
+    }
+
+    &__title{
+        font-size: 1.2em;
+        position: absolute;
+        top: -54px;
+        background-color: manager.$main-color;
+        padding: 0 25px;
+        
+    }
+
+    &__contact{
+        border: 80px solid manager.$secondary-color;
+        &::before{
+            border: 1px solid manager.$main-color; 
+        }
+        & a{
+            color: manager.$main-color;
+            background-color: manager.$secondary-color;
+            &:hover{
+                color: manager.$hover-nav-variant-color;
+            }
+            
+        }
+
+        
+        
+    }
+
+    &__contact &__title{
+        color: manager.$main-color;       
+        background-color: manager.$secondary-color;
+    }
+    
+}

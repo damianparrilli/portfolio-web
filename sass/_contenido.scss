@@ -1,0 +1,49 @@
+@use 'manager';
+
+.contenido{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__contact{
+        background-color: manager.$secondary-color;
+    }
+
+    #about &{
+        @include manager.flex-center(row, center);
+        gap: 35px;
+        padding: 0 200px;
+        font-size: 1.1em;
+        img{
+            filter: grayscale(80%);
+            max-width: 400px;
+            max-height: 400px
+        }
+    }
+}
+
+.redes-banner{
+    @include manager.flex-center(row, center);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    gap: 20px;
+    &__ind{
+    fill: manager.$secondary-color;
+    width: 82px;
+    height: 82px;
+    bottom: 0;
+    right: 0;
+    cursor: pointer;
+
+    &:hover{
+        fill: manager.$hover-secondary-color;
+    }
+}
+}

@@ -1,0 +1,49 @@
+$main-color: #F9F9F9;
+$secondary-color: #131313;
+$hover-main-color: #e0e0e0;
+$hover-nav-color: #696969;
+$hover-nav-variant-color: #c5c5c5;
+$hover-secondary-color: #292929;
+
+@mixin flex-center($flexdirection, $justifycontent){
+    display: flex;
+    justify-content: $justifycontent;
+    flex-direction: $flexdirection;
+    align-items: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    font-family: "Manrope", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: $main-color;
+    overflow: hidden;
+}
+
+.container{
+    position: relative;
+    height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  & img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+    
+    > * {
+        scroll-snap-align: start;
+        max-width: 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+}
