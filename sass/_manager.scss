@@ -5,11 +5,11 @@ $hover-nav-color: #696969;
 $hover-nav-variant-color: #c5c5c5;
 $hover-secondary-color: #292929;
 
-@mixin flex-center($flexdirection, $justifycontent){
+@mixin flex-center($flexdirection, $justifycontent, $alignitems){
     display: flex;
     justify-content: $justifycontent;
     flex-direction: $flexdirection;
-    align-items: center;
+    align-items: $alignitems;
 }
 
 * {
@@ -22,6 +22,14 @@ $hover-secondary-color: #292929;
 
 html{
     scroll-behavior: smooth;
+
+    @media (max-height: 800px) and (min-height: 700px) and (min-width: 600px){
+        font-size: 14px;
+    }
+
+    @media (max-height: 700px) and (min-width: 600px) {
+        font-size: 12px;
+    }
 }
 
 body{
@@ -34,14 +42,12 @@ body{
     height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
-  & img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-}
+ 
     
-    > * {
+    & > * {
         scroll-snap-align: start;
+        
+        scroll-snap-stop: always;
         max-width: 100%;
         width: 100vw;
         height: 100vh;

@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Manrope:wght@200..800&family=PT+Sans+Caption:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="img/favicon.ico">
 </head>
@@ -58,8 +58,9 @@
             </ul>
 
             <div class="contenido">
-                <img src="./img/foto-1x1.png" alt="Foto">
-                <p>Me llamo Damián Parrilli, tengo 24 años, soy Licenciado en Diseño Multimedial y me desempeño tanto en
+                <img src="./img/foto-1x1.png" alt="Foto" class="contenido__img-about">
+                <p class="contenido__p-about">Me llamo Damián Parrilli, tengo 24 años, soy Licenciado en Diseño
+                    Multimedial y me desempeño tanto en
                     diseño como en maquetado de páginas web. Mi enfoque principal esta siendo el desarrollo Front-end,
                     pero quisiera poder mejorar mis herramientas de cara al Diseño Web. Gracias a los conocimientos
                     adquiridos por mis estudios puedo desarrollar algunas tareas diversas al uso de herramientas de
@@ -73,7 +74,106 @@
                 <li class="nav-menu__btn"><a href="#projects">projects</a></li>
                 <li class="nav-menu__btn"><a href="#contact">contact</a></li>
             </ul>
-            <div class="contenido"></div>
+            <div class="contenido">
+                <div class="contenido__skills">
+                    <div class="formacion">
+                        <h2>Formación</h2>
+                        <a class="formacion__individual">
+                            <img src="./img/unlp.png" alt="UNLP" class="formacion__individual__img">
+                            <div class="formacion__individual__desc">
+                                <h3>Licenciatura en Diseño Multimedial</h3>
+                                <p>Facultad de Artes - UNLP</p>
+                                <p>2018 - feb. 2024</p>
+                            </div>
+                        </a>
+                        <a class="formacion__individual">
+                            <img src="./img/codo-a-codo.png" alt="Codo a Codo 4.0" class="formacion__individual__img">
+                            <div class="formacion__individual__desc">
+                                <h3>Curso Full-Stack NodeJS</h3>
+                                <p>Codo a Codo 4.0 - Gobierno de Buenos Aires</p>
+                                <p>2024</p>
+                            </div>
+                        </a>
+                        <div class="formacion__idiomas">
+                            <h2>Idiomas</h2>
+                            <div class="formacion__idiomas__individuales">
+                                <p><b>Español:</b> Nativo</p>
+                                <p><b>Inglés:</b> Escrito Intermedio, Oral Básico</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experiencia">
+                        <h2>Experiencia</h2>
+                        <div class="experiencia__individual">
+                            <h3>Tutor de Programación en Unity</h3>
+                            <p>Facultad de Artes - UNLP</p>
+                            <p>sept. 2023 - dic. 2023</p>
+                            <p>Catedra Taller de Diseño Multimedial 1</p>
+                            <ul>
+                                <li>Despeje y resolvi dudas de los alumnos a partir de la programación en Unity con C#.
+                                </li>
+                                <li>Fui parte del manejo de la plataforma de Discord como medio de comunicación
+                                    principal para el contacto con los alumnos.</li>
+                            </ul>
+                        </div>
+                        <div class="experiencia__individual">
+                            <h3>Diseño Web</h3>
+                            <p>Freelance</p>
+                            <p>2024</p>
+                            <p>B&BRacing Parts</p>
+                            <ul>
+                                <li>Realice el diseño de la WebApp OnePage, incluyendo el Login.</li>
+                                <li>Realice el desarrollo de un iframe para la descripción de productos de la plataforma
+                                    de Ebay.</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="herramientas">
+                        <div class="herramientas__section">
+                        <h2>Herramientas</h2>
+                        <ul class="herramientas__lista">
+                            <li><img src="./img/vsc.svg" alt="" class="herramientas__lista__img">Visual Studio Code</li>
+                            <li><img src="./img/unity.svg" alt="" class="herramientas__lista__img">Unity</li>
+                            <li><img src="./img/figma.svg" alt="" class="herramientas__lista__img">Figma</li>
+                            <li><img src="./img/aps.svg" alt="" class="herramientas__lista__img">Adobe Photoshop CC</li>
+                            <li><img src="./img/app.svg" alt="" class="herramientas__lista__img">Adobe Premiere Pro CC
+                            </li>
+                            <li><img src="./img/ai.svg" alt="" class="herramientas__lista__img">Adobe Illustrator CC
+                            </li>
+                            <li><img src="./img/aae.svg" alt="" class="herramientas__lista__img">Adobe After Effects CC
+                            </li>
+                            <li><img src="./img/office.svg" alt="" class="herramientas__lista__img">Paquete Microsoft
+                                Office</li>
+                        </ul>
+                    </div>
+                        <div class="herramientas__habilidades">
+                            <h2>Conocimientos técnicos</h2>
+                            <ul class="herramientas__habilidades__lista">
+                                <li><img src="./img/html5.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">HTML5</li>
+                                <li><img src="./img/css3.svg" alt="" class="herramientas__habilidades__lista__img">CSS3
+                                </li>
+                                <li><img src="./img/js.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">JavaScript</li>
+                                <li><img src="./img/bootstrap.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">Bootstrap</li>
+                                <li><img src="./img/sass.svg" alt="" class="herramientas__habilidades__lista__img">SASS
+                                </li>
+                                <li><img src="./img/ux-ui.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">Diseño UX/UI</li>
+                                <li><img src="./img/nodejs.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">Node.JS</li>
+                                <li><img src="./img/mysql.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">MySQL</li>
+                                <li><img src="./img/unity-c-sharp.svg" alt=""
+                                        class="herramientas__habilidades__lista__img">Unity C#</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
         </div>
         <div class="nav-menu" id="projects">
             <p class="nav-menu__title">projects</p>
@@ -82,7 +182,278 @@
                 <li class="nav-menu__btn"><a href="#skills">skills</a></li>
                 <li class="nav-menu__btn"><a href="#contact">contact</a></li>
             </ul>
-            <div class="contenido"></div>
+            <div class="contenido">
+                <div class="contenido__projects">
+                <div class="project project__bbracing-webapp">
+                    <div class="project__title">
+                        <h2>B&B Racing Parts WebApp</h2>
+                        <h4>Diseño Web Desktop</h4>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__bbracing-webapp1">Aa</span>
+                            <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__bbracing-webapp1">#171717</div>
+                            <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
+                            <div class="colores colores__bbracing-webapp3">#3A3A3A</div>
+                            <div class="colores colores__bbracing-webapp4">#525252</div>
+                            <div class="colores colores__bbracing-webapp5">#EDEDED</div>
+                            <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
+                        </div>
+                    </div>
+                    <div class="project__style-tile">
+                        <h3>Style tile</h3>
+                        <div class="styletile">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project project__boxedcat">
+                    <div class="project__title">
+                        <h2>BoxedCat</h2>
+                        <h4>Maquetado Web Desktop Responsive</h4>
+                    </div>
+                    <div class="project__buttons">
+                        <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
+                                class="sourcecode">Source Code</a>
+                        <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__boxedcat1">Aa</span>
+                            <span class="tipografia__boxedcat2">Roboto</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__boxedcat1">#69B9E7</div>
+                            <div class="colores colores__boxedcat2">#14273C</div>
+                            <div class="colores colores__boxedcat3">#F05E4C</div>
+                            <div class="colores colores__boxedcat4">#949494</div>
+                            <div class="colores colores__boxedcat5">#000000</div>
+                            <div class="colores colores__boxedcat6">#FFFFFF</div>
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/boxedcatimg.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project project__frenetic-comics">
+                    <div class="project__title">
+                        <h2>Frenetic Comics</h2>
+                        <h4>Diseño y maquetado de Landing Page - Mobile First y Responsive</h4>
+                        
+                    </div>
+                    <div class="project__buttons">
+                        <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
+                                class="sourcecode">Source Code</a>
+                        <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__frenetic-comics1">Aa</span>
+                            <span class="tipografia__frenetic-comics2">Rajdhani</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__frenetic-comics1">#000000</div>
+                            <div class="colores colores__frenetic-comics2">#FFFFFF</div>
+                            <div class="colores colores__frenetic-comics3">#E3A99E</div>
+                        </div>
+                    </div>
+                    <div class="project__style-tile">
+                        <h3>Style tile</h3>
+                        <div class="styletile">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/freneticcomicsimg.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project project__sodastereo-fanpage">
+                    <div class="project__title">
+                        <h2>Soda Stereo Fanpage</h2>
+                        <h4>Maquetado Onepage - Mobile First y Responsive</h4>
+                        
+                    </div>
+                    <div class="project__buttons">
+                        <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
+                                class="sourcecode">Source Code</a>
+                        <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__bbracing-webapp1">Aa</span>
+                            <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__bbracing-webapp1">#171717</div>
+                            <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
+                            <div class="colores colores__bbracing-webapp3">#3A3A3A</div>
+                            <div class="colores colores__bbracing-webapp4">#525252</div>
+                            <div class="colores colores__bbracing-webapp5">#EDEDED</div>
+                            <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
+                        </div>
+                    </div>
+                    <div class="project__style-tile">
+                        <h3>Style tile</h3>
+                        <div class="styletile">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project project__bbracing-iframe">
+                    <div class="project__title">
+                        <h2>B&B Racing Parts iframe</h2>
+                        <h4>Maquetado para descripción de productos de Ebay</h4>
+                    </div>
+                    <div class="project__buttons">
+                        <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
+                                class="sourcecode">Source Code</a>
+                        <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__bbracing-webapp1">Aa</span>
+                            <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__bbracing-webapp1">#171717</div>
+                            <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
+                            <div class="colores colores__bbracing-webapp3">#3A3A3A</div>
+                            <div class="colores colores__bbracing-webapp4">#525252</div>
+                            <div class="colores colores__bbracing-webapp5">#EDEDED</div>
+                            <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
+                        </div>
+                    </div>
+                    <div class="project__style-tile">
+                        <h3>Style tile</h3>
+                        <div class="styletile">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="project project__kz-group">
+                    <div class="project__title">
+                        <h2>KZ Group</h2>
+                        <h4>Propuesta de rediseño de One Page Web - Mobile First</h4>
+                    </div>
+                    <div class="project__typography">
+                        <h3>Tipografía</h3>
+                        <div class="tipografia">
+                            <span class="tipografia__kz-group1">Aa</span>
+                            <span class="tipografia__kz-group2">Montserrat</span>
+                        </div>
+                    </div>
+                    <div class="project__color">
+                        <h3>Colores</h3>
+                        <div class="project__color__seccion">
+                            <div class="colores colores__kz-group1">#EDEDED</div>
+                            <div class="colores colores__kz-group2">#0B0B0B</div>
+                            <div class="colores colores__kz-group3">#F07C00</div>
+                            <div class="colores colores__kz-group4">#C3C3C3</div>
+                            <div class="colores colores__kz-group5">#656565</div>
+                        </div>
+                    </div>
+                    <div class="project__style-tile">
+                        <h3>Style tile</h3>
+                        <div class="styletile">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                        </div>
+                    </div>
+                    <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                            class="project__img__portrait">
+                    </div>
+                    <div class="project__gallery">
+                        <h3>Galeria</h3>
+                        <div class="galeria">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
+                            <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
         </div>
         <div class="nav-menu nav-menu__contact" id="contact">
             <p class="nav-menu__title">contact</p>
@@ -97,6 +468,7 @@
         </div>
     </div>
     <script src="./js/main.js"></script>
+
 </body>
 
 </html>

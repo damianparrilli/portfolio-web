@@ -1,49 +1,172 @@
-@use 'manager';
+@use "manager";
 
-.contenido{
+.contenido {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
 
-    & img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+
+    @media (max-width: 600px) {
+        & > :not( .contenido__projects ) {
+            padding: 20px 0;
+        }
+
     }
 
-    &__contact{
+
+    &>* {
+        overflow-y: auto;
+        height: 100%;
+    }
+
+    &__contact {
         background-color: manager.$secondary-color;
     }
 
-    #about &{
-        @include manager.flex-center(row, center);
-        gap: 35px;
-        padding: 0 200px;
-        font-size: 1.1em;
-        img{
-            filter: grayscale(80%);
-            max-width: 400px;
-            max-height: 400px
+    #banner & {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 100%;
+            max-width: 1140px;
+            height: 100%;
+            object-fit: cover;
+
+            @media (max-width: 1140px) {
+                max-width: auto;
+                object-fit: contain;
+            }
         }
     }
+
+    #about & {
+        @include manager.flex-center(row, center, center);
+        gap: 35px;
+        padding: 0 clamp(0rem, -20.833rem + 27.778vw, 12.5rem);
+        font-size: 1.1em;
+
+        &__img-about {
+            filter: grayscale(80%);
+            max-width: 400px;
+            max-height: 400px;
+            object-fit: contain;
+        }
+
+        &__p-about {
+            width: 100%;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    #skills & {
+        @include manager.flex-center(column, center, center);
+
+        &__skills {
+            display: grid;
+            width: 100%;
+            height: 100%;
+            max-height: 600px;
+            grid-template-columns: repeat(3, 1fr);
+
+            gap: 50px;
+
+            @media (min-width: 600px) and (max-width: 1280px) {
+                grid-template-columns: repeat(2, 1fr);
+                max-height: clamp(40.625rem, 21.875rem + 50vw, 50rem);
+                font-size: clamp(0.65rem, -0.05rem + 1.867vw, 1rem);
+                gap: 25px;
+                grid-template-rows: min-content;
+                padding: 0;
+
+                .herramientas {
+                    gap: 50px;
+
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-column: span 2;
+
+                    &__habilidades {
+                        margin-top: 0;
+                    }
+                }
+
+            }
+
+            @media (max-width: 600px) {
+                grid-template-columns: 1fr;
+                max-height: 100%;
+            }
+
+            &>* {
+                @include manager.flex-center(column, flex-start, flex-start);
+                gap: 15px;
+            }
+        }
+    }
+
+    #projects &__projects {
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        position: relative;
+        overflow-y: hidden;
+
+        @media (max-width: 600px) {
+            overflow-y: auto;
+            align-items: flex-start;
+            
+        }
+
+        /* Internet Explorer y Edge */
+        &::-webkit-scrollbar {
+            display: none;
+            /* Safari y Chrome */
+        }
+    }
+
+
+
 }
 
-.redes-banner{
-    @include manager.flex-center(row, center);
+.redes-banner {
+    @include manager.flex-center(row, center, center);
     position: absolute;
     right: 0;
     bottom: 0;
     gap: 20px;
-    &__ind{
-    fill: manager.$secondary-color;
-    width: 82px;
-    height: 82px;
-    bottom: 0;
-    right: 0;
-    cursor: pointer;
+    height: auto;
 
-    &:hover{
-        fill: manager.$hover-secondary-color;
+    @media (max-width: 610px) {
+        padding: 0 15px 15px 0;
     }
-}
+
+
+    &__ind {
+        fill: manager.$secondary-color;
+        width: 82px;
+        height: 82px;
+        bottom: 0;
+        right: 0;
+        cursor: pointer;
+
+        @media (max-width: 610px) {
+            width: 70px;
+            height: 70px;
+        }
+
+        &:hover {
+            fill: manager.$hover-secondary-color;
+        }
+    }
 }
