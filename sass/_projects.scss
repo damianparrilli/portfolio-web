@@ -240,8 +240,9 @@
         "gallery"
     ;
     max-height: none;
+    min-height: max-content;
+    overflow-x: hidden;
     padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
-    height: 1700px;
     row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);
     align-content: flex-start;
     font-size: clamp(0.5rem, -0.071rem + 2.857vw, 1rem);
@@ -466,7 +467,7 @@
 .galeria {
     @include manager.flex-center(row, flex-start, center);
     gap: 15px;
-
+    overflow-x: auto;
     &__img {
         width: 100%;
         height: 100%;

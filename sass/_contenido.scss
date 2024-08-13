@@ -22,6 +22,7 @@
 
     &__contact {
         background-color: manager.$secondary-color;
+        overflow: auto;
     }
 
     #banner & {

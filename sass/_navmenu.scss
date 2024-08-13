@@ -16,7 +16,7 @@ $desktop-tablet: 80px;
     justify-content: center;
     align-items: center;
     transition: opacity .8s;
-    
+
     @media (max-width: 900px) {
         border: $mobile solid manager.$main-color;
         height: calc(100vh - 60px);
@@ -39,9 +39,9 @@ $desktop-tablet: 80px;
             top: -20px;
             left: -20px;
             border: 1px solid manager.$secondary-color;
-            
+
         }
-        
+
     }
 
 
@@ -50,7 +50,7 @@ $desktop-tablet: 80px;
     &__buttons {
         position: absolute;
         bottom: -52.5px;
-        
+
         font-size: 1.2em;
 
         z-index: 3;
@@ -64,9 +64,7 @@ $desktop-tablet: 80px;
             gap: 15px;
         }
 
-        @media (max-width: 570px) {
-           
-        }
+        @media (max-width: 570px) {}
 
         a {
             padding: 0 25px;
@@ -89,6 +87,7 @@ $desktop-tablet: 80px;
         background-color: manager.$main-color;
         padding: 0 25px;
         z-index: 3;
+
         @media (max-width: 900px) {
             top: -32px;
         }
@@ -97,8 +96,41 @@ $desktop-tablet: 80px;
     &__contact {
         border: 80px solid manager.$secondary-color;
 
+        @media (max-width: 900px) {
+            border: $mobile solid manager.$secondary-color;
+            height: calc(100% - 60px);
+            margin-bottom: 60px;
+        }
+
         &::before {
             border: 1px solid manager.$main-color;
+
+            @media (max-width: 900px) {
+                content: "";
+                position: absolute;
+                width: calc(100% + 40px);
+                height: calc(100% + 40px);
+                
+                top: -20px;
+                left: -20px;
+                border: 1px solid manager.$main-color;
+    
+            }
+
+        }
+
+        &::after{
+            @media (max-width: 900px) {
+                content: "";
+                position: absolute;
+                width: 100vw;
+                height: 100px;
+                
+                bottom: -105px;
+                left: -45px;
+                background-color: manager.$secondary-color;
+                z-index: -1;
+            }
         }
 
         & a {
@@ -118,6 +150,39 @@ $desktop-tablet: 80px;
     &__contact &__title {
         color: manager.$main-color;
         background-color: manager.$secondary-color;
+    }
+
+    #flecha-der {
+        position: absolute;
+        right: -55px;
+        top: calc(50% - 40px);
+        z-index: 2;
+        background-color: manager.$main-color;
+        padding: 25px 0;
+        width: 24px;
+        height: auto;
+        cursor: pointer;
+        @media (max-width: 900px) {
+            right: -35px;
+            top: calc(50% - 60px);
+        }
+    }
+
+    #flecha-izq {
+        position: absolute;
+        left: -55px;
+        top: calc(50% - 40px);
+        z-index: 2;
+        background-color: manager.$main-color;
+        padding: 25px 0;
+        width: 24px;
+        height: auto;
+        transform: rotate(180deg);
+        cursor: pointer;
+        @media (max-width: 900px) {
+            left: -35px;
+            top: calc(50% - 60px);
+        }
     }
 
 }
