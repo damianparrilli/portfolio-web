@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="icon" href="img/favicon.ico">
 </head>
@@ -58,13 +58,46 @@
             </ul>
 
             <div class="contenido">
-                <img src="./img/foto-1x1.png" alt="Foto" class="contenido__img-about">
-                <p class="contenido__p-about">Me llamo Damián Parrilli, tengo 24 años, soy Licenciado en Diseño
-                    Multimedial y me desempeño tanto en
-                    diseño como en maquetado de páginas web. Mi enfoque principal esta siendo el desarrollo Front-end,
-                    pero quisiera poder mejorar mis herramientas de cara al Diseño Web. Gracias a los conocimientos
-                    adquiridos por mis estudios puedo desarrollar algunas tareas diversas al uso de herramientas de
-                    diseño como también de programación orientada a objetos. </p>
+                <div class="card-container">
+                    <div class="card">
+                        <div class="face front">
+                            <img src="./img/foto-1x1.png" alt="Foto" class="front__img">
+                            <div class="front__texto">
+                                <span class="front__texto__text"><b>Nombre:</b> Damián Alen</span>
+                                <span class="front__texto__text"><b>Apellido:</b> Parrilli</span>
+                                <span class="front__texto__text"><b>Nacionalidad:</b> Argentina</span>
+                                <span class="front__texto__text"><b>Edad:</b> 24 años</span>
+                                <span class="front__texto__text"><b>Fecha de nacimiento:</b> 25/02/2000</span>
+                                <span class="front__texto__indentity">Tarjeta de identidad</span>
+                            </div>
+                        </div>
+                        <div class="face back" id="back">
+                            <div class="back__texto">
+                                <a href="" class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</a>
+                                <a class="back__texto__text"><b>LinkedIn:</b> damiparrilli</a>
+                                <a class="back__texto__text"><b>Github:</b> damiparrilli</a>
+                                <a class="back__texto__text"><b>Discord:</b> alendp</a>
+                                <a class="back__texto__text"><b>Telefono:</b> +54 1160518730</a>
+                            </div>
+                            <img src="./img/dp-logo.svg" alt="Damián Parrilli" class="back__img">
+                        </div>
+                    </div>
+                </div>
+                <p class="about-descripcion">Soy un apasionado en el diseño y desarrollo de interfaces web, y estoy en
+                    búsqueda de crecer adquiriendo conocimientos nuevos que permitan un mayor desarrollo profesional.
+                    Tengo interés en la creación de plataformas web como solución a problemas de experiencias de
+                    usuario, con el compromiso de generar interfaces funcionales, innovadoras y eficientes. Poseo
+                    habilidades de trabajo en equipo y adaptabilidad al cambio. Estoy preparado para afrontar desafíos
+                    nuevos que permitan seguir avanzando en mi carrera profesional.</p>
+
+                <!-- 
+                <p class="contenido__p-about">Soy un apasionado en el diseño y desarrollo de interfaces web, y estoy en
+                    búsqueda de crecer adquiriendo conocimientos nuevos que permitan un mayor desarrollo profesional.
+                    Tengo interés en la creación de plataformas web como solución a problemas de experiencias de
+                    usuario, con el compromiso de generar interfaces funcionales, innovadoras y eficientes. Poseo
+                    habilidades de trabajo en equipo y adaptabilidad al cambio. Estoy preparado para afrontar desafíos
+                    nuevos que permitan seguir avanzando en mi carrera profesional.
+                </p> -->
             </div>
         </div>
         <div class="nav-menu" id="skills">
@@ -203,6 +236,13 @@
                                 <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
                             </div>
                         </div>
+                        <div class="project__description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised</p>
+                        </div>
                         <div class="project__color">
                             <h3>Colores</h3>
                             <div class="project__color__seccion">
@@ -243,6 +283,13 @@
                             <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
                                     class="sourcecode">Source Code</a>
                             <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                        </div>
+                        <div class="project__description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised</p>
                         </div>
                         <div class="project__typography">
                             <h3>Tipografía</h3>
@@ -292,6 +339,13 @@
                                 <span class="tipografia__frenetic-comics1">Aa</span>
                                 <span class="tipografia__frenetic-comics2">Rajdhani</span>
                             </div>
+                        </div>
+                        <div class="project__description">
+                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+                                has been the industry's standard dummy text ever since the 1500s, when an unknown
+                                printer took a galley of type and scrambled it to make a type specimen book. It has
+                                survived not only five centuries, but also the leap into electronic typesetting,
+                                remaining essentially unchanged. It was popularised</p>
                         </div>
                         <div class="project__color">
                             <h3>Colores</h3>
@@ -520,9 +574,9 @@
                     </div>
 
                     <div class="contacto__footer">
-                        <img src="./img/dp-logo.svg" alt="Damián Parrilli" class="contacto__footer_img">
+                        <img src="./img/dp-logo.svg" alt="Damián Parrilli" class="contacto__footer__img">
                         <div class="contacto__footer__copyright">
-                            <span>Copyright 2024 ©  Damián Parrilli</span>
+                            <span>Copyright 2024 © Damián Parrilli</span>
                             <span>Buenos Aires, Argentina</span>
                         </div>
 

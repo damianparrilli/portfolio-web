@@ -45,34 +45,39 @@
     }
 
     #about & {
-        @include manager.flex-center(row, center, center);
+        @include manager.flex-center(column, space-evenly, center);
         gap: 35px;
-        padding: 0 clamp(0rem, -20.833rem + 27.778vw, 12.5rem);
-        font-size: 1.1em;
-
-        &__img-about {
-            filter: grayscale(80%);
-            max-width: 400px;
-            max-height: 400px;
-            object-fit: contain;
+        @media (max-width: 900px) {
+            
+            overflow-y: auto;
+                    
+        
         }
 
-        &__p-about {
-            width: 100%;
-            display: flex;
-            align-items: center;
-
-            @media (max-width: 600px) {
-                align-items: flex-start;
-            }
+        @media (min-width: 600px) and (max-width: 900px) {
+            padding: 20px 0;
         }
 
         @media (max-width: 600px) {
-            flex-direction: column;
-            font-size: 0.95em;
-            justify-content: flex-start;
-            gap: 0;
+            @include manager.flex-center(column, flex-start, center);
+            gap: 5px;
         }
+        // padding: 0 clamp(0rem, -20.833rem + 27.778vw, 12.5rem);
+        // font-size: 1.1em;
+
+        
+
+        //     @media (max-width: 600px) {
+        //         align-items: flex-start;
+        //     }
+        
+
+        // @media (max-width: 600px) {
+        //     flex-direction: column;
+        //     font-size: 0.95em;
+        //     justify-content: flex-start;
+        //     gap: 0;
+        // }
     }
 
     #skills & {
