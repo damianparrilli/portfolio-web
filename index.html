@@ -3,19 +3,25 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preload" href="./css/style.css" as="style">
-    <title>Portfolio Web</title>
+    <title>Damián Parrilli - Portfolio Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="img/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+        <link rel="manifest" href="./img/site.webmanifest">
 </head>
 
 <body>
+    <div class="loader">
+        <div id="loader"></div>
+    </div>
     <div class="container">
         <div class="nav-menu" id="banner">
             <ul class="nav-menu__buttons">
@@ -23,9 +29,11 @@
                 <li class="nav-menu__btn"><a href="#skills">skills</a></li>
                 <li class="nav-menu__btn"><a href="#projects">projects</a></li>
                 <li class="nav-menu__btn"><a href="#contact">contact</a></li>
+                <img id="popup-close" src="./img/close.svg" alt="Hamburguer Menu">
             </ul>
+            <a id="popup-open"><img src="./img/menu.svg" alt="Hamburguer Menu"></a>
             <div class="contenido">
-                <img src="./img/animacion.gif" alt="Intro">
+                <div id="animacion"></div>
                 <div class="redes-banner">
                     <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
                         <svg class="redes-banner__ind" viewBox="0 0 83 83" fill="none"
@@ -35,7 +43,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://github.com/damiparrilli" target="_blank"><svg class="redes-banner__ind"
+                    <a href="https://github.com/damianparrilli" target="_blank"><svg class="redes-banner__ind"
                             viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.00012207" y="78.0005" width="82.1533" height="4.1528" />
                             <rect y="6.10352e-05" width="82.1533" height="14.0834" />
@@ -61,7 +69,7 @@
                 <div class="card-container">
                     <div class="card">
                         <div class="face front">
-                            <img src="./img/foto-1x1.png" alt="Foto" class="front__img">
+                            <img src="./img/foto-1x1.webp" alt="Foto" class="front__img">
                             <div class="front__texto">
                                 <span class="front__texto__text"><b>Nombre:</b> Damián Alen</span>
                                 <span class="front__texto__text"><b>Apellido:</b> Parrilli</span>
@@ -73,11 +81,11 @@
                         </div>
                         <div class="face back" id="back">
                             <div class="back__texto">
-                                <a href="" class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</a>
-                                <a class="back__texto__text"><b>LinkedIn:</b> damiparrilli</a>
-                                <a class="back__texto__text"><b>Github:</b> damiparrilli</a>
-                                <a class="back__texto__text"><b>Discord:</b> alendp</a>
+                                <a class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</a>
                                 <a class="back__texto__text"><b>Telefono:</b> +54 1160518730</a>
+                                <a class="back__texto__text"><b>Discord:</b> alendp</a>
+                                <a href="https://drive.google.com/file/d/1A5Wpw9mBDjPdLU9VPdSDbtLBzCXVrfbk/view?usp=sharing"
+                                    target="_blank" class="back__texto__button">Mi CV</a>
                             </div>
                             <img src="./img/dp-logo.svg" alt="Damián Parrilli" class="back__img">
                         </div>
@@ -89,15 +97,6 @@
                     usuario, con el compromiso de generar interfaces funcionales, innovadoras y eficientes. Poseo
                     habilidades de trabajo en equipo y adaptabilidad al cambio. Estoy preparado para afrontar desafíos
                     nuevos que permitan seguir avanzando en mi carrera profesional.</p>
-
-                <!-- 
-                <p class="contenido__p-about">Soy un apasionado en el diseño y desarrollo de interfaces web, y estoy en
-                    búsqueda de crecer adquiriendo conocimientos nuevos que permitan un mayor desarrollo profesional.
-                    Tengo interés en la creación de plataformas web como solución a problemas de experiencias de
-                    usuario, con el compromiso de generar interfaces funcionales, innovadoras y eficientes. Poseo
-                    habilidades de trabajo en equipo y adaptabilidad al cambio. Estoy preparado para afrontar desafíos
-                    nuevos que permitan seguir avanzando en mi carrera profesional.
-                </p> -->
             </div>
         </div>
         <div class="nav-menu" id="skills">
@@ -112,7 +111,7 @@
                     <div class="formacion">
                         <h2>Formación</h2>
                         <a class="formacion__individual">
-                            <img src="./img/unlp.png" alt="UNLP" class="formacion__individual__img">
+                            <img src="./img/unlp.webp" alt="UNLP" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Licenciatura en Diseño Multimedial</h3>
                                 <p>Facultad de Artes - UNLP</p>
@@ -120,7 +119,7 @@
                             </div>
                         </a>
                         <a class="formacion__individual">
-                            <img src="./img/codo-a-codo.png" alt="Codo a Codo 4.0" class="formacion__individual__img">
+                            <img src="./img/codo-a-codo.webp" alt="Codo a Codo 4.0" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Curso Full-Stack NodeJS</h3>
                                 <p>Codo a Codo 4.0 - Gobierno de Buenos Aires</p>
@@ -138,10 +137,10 @@
                     <div class="experiencia">
                         <h2>Experiencia</h2>
                         <div class="experiencia__individual">
-                            <h3>Tutor de Programación en Unity</h3>
+                            <h3>Ayudante y Tutor de Programación en Unity</h3>
                             <p>Facultad de Artes - UNLP</p>
-                            <p>sept. 2023 - dic. 2023</p>
-                            <p>Catedra Taller de Diseño Multimedial 1</p>
+                            <p>sept. 2023 - Actualidad</p>
+                            <p>Catedra Taller de Diseño de Experiencias Interactivas (ex. Taller de Diseño Multimedial 1)</p>
                             <ul>
                                 <li>Despeje y resolvi dudas de los alumnos a partir de la programación en Unity con C#.
                                 </li>
@@ -152,8 +151,8 @@
                         <div class="experiencia__individual">
                             <h3>Diseño Web</h3>
                             <p>Freelance</p>
-                            <p>2024</p>
-                            <p>B&BRacing Parts</p>
+                            <p>abril 2024 - mayo 2024</p>
+                            <p>B&B Racing Parts</p>
                             <ul>
                                 <li>Realice el diseño de la WebApp OnePage, incluyendo el Login.</li>
                                 <li>Realice el desarrollo de un iframe para la descripción de productos de la plataforma
@@ -206,6 +205,8 @@
                                         class="herramientas__habilidades__lista__img">MySQL</li>
                                 <li><img src="./img/unity-c-sharp.svg" alt=""
                                         class="herramientas__habilidades__lista__img">Unity C#</li>
+                                <li><img src="./img/git.svg" alt="" class="herramientas__habilidades__lista__img">Git
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -237,11 +238,10 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised</p>
+                            <p>Diseño de interfaz hecho para la empresa B&B Racing Parts, con la necesidad de generar
+                                una plataforma funcional y con buena usabilidad.
+                                <br>Se incluye diseño de Login, plataforma principal One Page y el sistema de filtros.
+                            </p>
                         </div>
                         <div class="project__color">
                             <h3>Colores</h3>
@@ -256,20 +256,25 @@
                         </div>
                         <div class="project__style-tile">
                             <h3>Style tile</h3>
-                            <div class="styletile">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                            <div class="styletile" data-styletile="1">
+                                <img src="./img/B&BRacingStyleTile_1.webp" alt="BBRacing Styletile 1"
+                                    class="styletile__img" data-index="0">
+                                <img src="./img/B&BRacingStyleTile_2.webp" alt="BBRacing Styletile 2"
+                                    class="styletile__img" data-index="1">
                             </div>
                         </div>
-                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.webp" alt="BBracing Parts"
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
                             <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                            <div class="galeria" data-gallery="1">
+                                <img src="./img/bbracing-webappimg1.webp" alt="BBRacing Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/bbracing-webappimg2.webp" alt="BBRacing Gallery 2" class="galeria__img"
+                                    data-index="1">
+                                <img src="./img/bbracing-webappimg3.webp" alt="BBRacing Gallery 3" class="galeria__img"
+                                    data-index="2">
                             </div>
                         </div>
 
@@ -280,16 +285,17 @@
                             <h4>Maquetado Web Desktop Responsive</h4>
                         </div>
                         <div class="project__buttons">
-                            <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
-                                    class="sourcecode">Source Code</a>
-                            <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                            <a href="https://github.com/damianparrilli/boxedcat" target="_blank"><img
+                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                Code</a>
+                            <a href="https://boxedcat.netlify.app" target="_blank"><img src="./img/demo.svg" alt="Demo"
+                                    class="demo">Demo</a>
                         </div>
                         <div class="project__description">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised</p>
+                            <p>Una simulación de una nota, en este caso de una entrevista, en donde hay elementos
+                                interactivos como el poder guardar una nota, poder valorar la nota y comentar en ella.
+                                Este maquetado incluye un registro y login funcional con localStorage. Está hecha con
+                                HTML5, CSS3 y JavaScript puro.</p>
                         </div>
                         <div class="project__typography">
                             <h3>Tipografía</h3>
@@ -309,16 +315,22 @@
                                 <div class="colores colores__boxedcat6">#FFFFFF</div>
                             </div>
                         </div>
-                        <div class="project__img"><img src="./img/boxedcatimg.png" alt="BBracing Parts"
+                        <div class="project__img"><img src="./img/boxedcatimg.webp" alt="BoxedCat"
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
                             <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
-                            </div>
+                            
+                            <div class="galeria" data-gallery="2">
+                                
+                                <img src="./img/boxedcat1.webp" alt="BoxedCat Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/boxedcat2.webp" alt="BoxedCat Gallery 2" class="galeria__img"
+                                    data-index="1">
+                                <img src="./img/boxedcat3.webp" alt="BoxedCat Gallery 3" class="galeria__img"
+                                    data-index="2">
+                            
+                        </div>
                         </div>
 
                     </div>
@@ -329,9 +341,11 @@
 
                         </div>
                         <div class="project__buttons">
-                            <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
-                                    class="sourcecode">Source Code</a>
-                            <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                            <a href="https://github.com/damianparrilli/frenetic-landing" target="_blank"><img
+                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                Code</a>
+                            <a href="https://fernetic-comics.netlify.app" target="_blank"><img src="./img/demo.svg"
+                                    alt="Demo" class="demo">Demo</a>
                         </div>
                         <div class="project__typography">
                             <h3>Tipografía</h3>
@@ -341,11 +355,9 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-                                has been the industry's standard dummy text ever since the 1500s, when an unknown
-                                printer took a galley of type and scrambled it to make a type specimen book. It has
-                                survived not only five centuries, but also the leap into electronic typesetting,
-                                remaining essentially unchanged. It was popularised</p>
+                            <p>Una landing page hecha en 2020, readaptada en 2024 para una mejor legibilidad y
+                                usabilidad. Basado en un diseño de ese mismo año hecho por mi. Es Mobile First y
+                                Responsive para cualquier dispositivo. Está hecha con HTML5, CSS3 y JavaScript puro.</p>
                         </div>
                         <div class="project__color">
                             <h3>Colores</h3>
@@ -355,84 +367,43 @@
                                 <div class="colores colores__frenetic-comics3">#E3A99E</div>
                             </div>
                         </div>
-                        <div class="project__style-tile">
+                        <!-- <div class="project__style-tile">
                             <h3>Style tile</h3>
-                            <div class="styletile">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                            <div class="styletile" data-styletile="2">
+                                <img src="./img/rectanglep.webp" alt="BBRacing Styletile 1" class="styletile__img"
+                                    data-index="0">
+                                <img src="./img/rectanglep.webp" alt="BBRacing Styletile 2" class="styletile__img"
+                                    data-index="1">
                             </div>
-                        </div>
-                        <div class="project__img"><img src="./img/freneticcomicsimg.png" alt="BBracing Parts"
+                        </div> -->
+                        <div class="project__img"><img src="./img/freneticcomicsimg.webp" alt="Frenetic Comics"
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
                             <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                            <div class="galeria" data-gallery="3">
+                                <img src="./img/freneticcomics1.webp" alt="Frenetic Comics Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/freneticcomics2.webp" alt="Frenetic Comics Gallery 2" class="galeria__img"
+                                    data-index="1">
+                                <img src="./img/freneticcomics3.webp" alt="Frenetic Comics Gallery 3" class="galeria__img"
+                                    data-index="2">
                             </div>
                         </div>
 
                     </div>
-                    <div class="project project__sodastereo-fanpage">
-                        <div class="project__title">
-                            <h2>Soda Stereo Fanpage</h2>
-                            <h4>Maquetado Onepage - Mobile First y Responsive</h4>
 
-                        </div>
-                        <div class="project__buttons">
-                            <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
-                                    class="sourcecode">Source Code</a>
-                            <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
-                        </div>
-                        <div class="project__typography">
-                            <h3>Tipografía</h3>
-                            <div class="tipografia">
-                                <span class="tipografia__bbracing-webapp1">Aa</span>
-                                <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
-                            </div>
-                        </div>
-                        <div class="project__color">
-                            <h3>Colores</h3>
-                            <div class="project__color__seccion">
-                                <div class="colores colores__bbracing-webapp1">#171717</div>
-                                <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
-                                <div class="colores colores__bbracing-webapp3">#3A3A3A</div>
-                                <div class="colores colores__bbracing-webapp4">#525252</div>
-                                <div class="colores colores__bbracing-webapp5">#EDEDED</div>
-                                <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
-                            </div>
-                        </div>
-                        <div class="project__style-tile">
-                            <h3>Style tile</h3>
-                            <div class="styletile">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
-                            </div>
-                        </div>
-                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
-                                class="project__img__portrait">
-                        </div>
-                        <div class="project__gallery">
-                            <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
-                            </div>
-                        </div>
-
-                    </div>
                     <div class="project project__bbracing-iframe">
                         <div class="project__title">
                             <h2>B&B Racing Parts iframe</h2>
                             <h4>Maquetado para descripción de productos de Ebay</h4>
                         </div>
                         <div class="project__buttons">
-                            <a href=""><img src="./img/github-sourcecode.svg" alt="Source Code"
-                                    class="sourcecode">Source Code</a>
-                            <a href=""><img src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                            <a href="https://github.com/damianparrilli/bbracing-ebay" target="_blank"><img
+                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                Code</a>
+                            <a href="https://bbracing-ebay-desc-demo.netlify.app/" target="_blank"><img
+                                    src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
                         </div>
                         <div class="project__typography">
                             <h3>Tipografía</h3>
@@ -440,6 +411,14 @@
                                 <span class="tipografia__bbracing-webapp1">Aa</span>
                                 <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
                             </div>
+                        </div>
+                        <div class="project__description">
+                            <p>Un iframe para la descripción de productos de Ebay, para la empresa B&B Racing Parts. Es
+                                Mobile First y Responsive, y esta hecha solo con HTML y CSS incluido en el Style debido a que Ebay no permite uso de programación. La Demo muestra cómo se vería en el dispositivo que
+                                estuvieras abriendo la página, pero para casos reales, recomiendo ir a ver productos que
+                                contengan este tipo de descripciones en <a href="https://www.ebay.com/str/bbsupplyllc"
+                                    target="_blank">B&B Supply LLC Ebay.</a>
+                            </p>
                         </div>
                         <div class="project__color">
                             <h3>Colores</h3>
@@ -452,26 +431,78 @@
                                 <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
                             </div>
                         </div>
-                        <div class="project__style-tile">
-                            <h3>Style tile</h3>
-                            <div class="styletile">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
-                            </div>
-                        </div>
-                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+
+                        <div class="project__img"><img src="./img/bbracingiframe-img.webp" alt="BBracing Parts Iframe"
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
                             <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                            <div class="galeria" data-gallery="5">
+                                <img src="./img/bbracingiframe1.webp" alt="BBRacing Iframe Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/bbracingiframe2.webp" alt="BBRacing Iframe Gallery 2" class="galeria__img"
+                                    data-index="1">
                             </div>
                         </div>
 
                     </div>
+
+                    <!-- <div class="project project__sodastereo-fanpage">
+                        <div class="project__title">
+                            <h2>Soda Stereo Fanpage</h2>
+                            <h4>Maquetado Onepage - Mobile First y Responsive</h4>
+
+                        </div>
+                        <div class="project__buttons">
+                            <a href="https://github.com/aanampa08/ProyectoCODE" target="_blank"><img
+                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                Code</a>
+                            <a href="https://cac40-grupo10-24260front.netlify.app" target="_blank"><img
+                                    src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                        </div>
+                        <div class="project__typography">
+                            <h3>Tipografía</h3>
+                            <div class="tipografia">
+                                <span class="tipografia__bbracing-webapp1">Aa</span>
+                                <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
+                            </div>
+                        </div>
+                        <div class="project__description">
+                            <p>Es una página distribuida en Onepage, adaptada a todos los dispositivos. El diseño en
+                                el cual se basó el maquetado está hecho por mi. Incluye un login como funcionalidad
+                                principal, y adaptaciones Mobile First y Responsive. Fue realizado con HTML5, CSS3 y
+                                JavaScript puro.
+                            </p>
+                        </div>
+                        <div class="project__color">
+                            <h3>Colores</h3>
+                            <div class="project__color__seccion">
+                                <div class="colores colores__bbracing-webapp1">#171717</div>
+                                <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
+                                <div class="colores colores__bbracing-webapp3">#3A3A3A</div>
+                                <div class="colores colores__bbracing-webapp4">#525252</div>
+                                <div class="colores colores__bbracing-webapp5">#EDEDED</div>
+                                <div class="colores colores__bbracing-webapp6">#DB2C2C</div>
+                            </div>
+                        </div>
+                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.webp" alt="Soda Stereo"
+                                class="project__img__portrait">
+                        </div>
+                        <div class="project__gallery">
+                            <h3>Galeria</h3>
+                            <div class="galeria" data-gallery="4">
+                                <img src="./img/rectanglep.webp" alt="Soda Stereo Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/rectanglep.webp" alt="Soda Stereo Gallery 2" class="galeria__img"
+                                    data-index="1">
+                                <img src="./img/rectanglep.webp" alt="Soda Stereo Gallery 3" class="galeria__img"
+                                    data-index="2">
+                            </div>
+                        </div>
+
+                    </div> -->
+
+
                     <div class="project project__kz-group">
                         <div class="project__title">
                             <h2>KZ Group</h2>
@@ -483,6 +514,12 @@
                                 <span class="tipografia__kz-group1">Aa</span>
                                 <span class="tipografia__kz-group2">Montserrat</span>
                             </div>
+                        </div>
+                        <div class="project__description">
+                            <p>Rediseño de la página de KZ Group, para una mayor legibilidad y usabilidad, actualización
+                                de uso de colores, paddings y márgenes así como la inclusión de nuevos modos de
+                                navegación con para todos los dispositivos.
+                            </p>
                         </div>
                         <div class="project__color">
                             <h3>Colores</h3>
@@ -496,23 +533,36 @@
                         </div>
                         <div class="project__style-tile">
                             <h3>Style tile</h3>
-                            <div class="styletile">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 1" class="styletile__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Styletile 2" class="styletile__img">
+                            <div class="styletile" data-styletile="5">
+                                <img src="./img/KZGroupStyletile_1.webp" alt="KZ Group Styletile 1" class="styletile__img"
+                                    data-index="0">
+                                <img src="./img/KZGroupStyletile_2.webp" alt="KZ Group Styletile 2" class="styletile__img"
+                                    data-index="1">
                             </div>
                         </div>
-                        <div class="project__img"><img src="./img/bbracing-webapp-portrait.png" alt="BBracing Parts"
+                        <div class="project__img"><img src="./img/kzgroup-img.webp" alt="BBracing Parts"
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
                             <h3>Galeria</h3>
-                            <div class="galeria">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 1" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 2" class="galeria__img">
-                                <img src="./img/rectanglep.png" alt="BBRacing Gallery 3" class="galeria__img">
+                            <div class="galeria" data-gallery="6">
+                                <img src="./img/kz-group1.webp" alt="KZ Group Gallery 1" class="galeria__img"
+                                    data-index="0">
+                                <img src="./img/kz-group2.webp" alt="KZ Group Gallery 2" class="galeria__img"
+                                    data-index="1">
+                                <img src="./img/kz-group3.webp" alt="KZ Group Gallery 3" class="galeria__img"
+                                    data-index="2">
+                                    <img src="./img/kz-group4.webp" alt="KZ Group Gallery 3" class="galeria__img"
+                                    data-index="3">
                             </div>
                         </div>
                     </div>
+                </div>
+                <div id="popup">
+                    <img src="./img/close.svg" alt="Close" class="popup-close">
+                    <img id="popup-image" src="" alt="Popup Image">
+                    <img src="./img/arrow.svg" class="popup-prev">
+                    <img src="./img/arrow.svg" class="popup-next">
                 </div>
             </div>
         </div>
@@ -533,7 +583,7 @@
                         <input type="submit" value="Enviar" id="submit">
                     </form>
                     <div class="contacto__redes">
-                        <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
+                        <a href="tel:+541160518730" target="_blank">
                             <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path fill-rule="evenodd" clip-rule="evenodd"
                                     d="M44 3H3V44H44V3ZM25.5671 32.6908C20.7325 30.2137 16.7692 26.2675 14.3092 21.4329L18.0675 17.6746C18.5458 17.1963 18.6825 16.53 18.4946 15.9321C17.8465 13.9642 17.5178 11.9052 17.5208 9.83333C17.5208 8.89375 16.7521 8.125 15.8125 8.125H9.83333C8.89375 8.125 8.125 8.89375 8.125 9.83333C8.125 25.8746 21.1254 38.875 37.1667 38.875C38.1063 38.875 38.875 38.1063 38.875 37.1667V31.2046C38.875 30.265 38.1063 29.4963 37.1667 29.4963C35.0483 29.4963 32.9813 29.1546 31.0679 28.5225C30.47 28.3175 29.7867 28.4713 29.3254 28.9325L25.5671 32.6908Z" />
@@ -544,7 +594,7 @@
                             </svg>
 
                         </a>
-                        <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
+                        <a href="mailto:damiparrilli@gmail.com" target="_blank">
                             <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect width="46" height="46" />
                                 <path
@@ -561,7 +611,7 @@
                             </svg>
 
                         </a>
-                        <a href="https://github.com/damiparrilli" target="_blank"><svg class="contacto__redes__github"
+                        <a href="https://github.com/damianparrilli" target="_blank"><svg class="contacto__redes__github"
                                 viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.00012207" y="78.0005" width="82.1533" height="4.1528" />
                                 <rect y="6.10352e-05" width="82.1533" height="14.0834" />
@@ -585,6 +635,7 @@
             </div>
         </div>
     </div>
+    <script src="./js/lottie.js"></script>
     <script src="./js/main.js"></script>
 
 </body>

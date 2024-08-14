@@ -13,7 +13,13 @@
         &__img {
             width: 100%;
             max-width: 4.6em;
+            
             object-fit: contain;
+
+            @media (max-width: 600px) {
+                margin: 0 10px;
+                
+            }
         }
 
         &__desc {
@@ -36,7 +42,7 @@
     &__individual {
         @include manager.flex-center(column, center, flex-start);
         gap: 5px;
-
+        margin-bottom: 30px;
         ul {
             @include manager.flex-center(inherit, inherit, inherit);
             gap: inherit;
@@ -59,9 +65,11 @@
 }
 
 .herramientas {
+    
     &__section{
         @include manager.flex-center(column, center, flex-start);
         gap: 15px;
+        width: 100%;
     }
     &__lista {
         @include listas-habilidades();

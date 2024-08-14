@@ -9,6 +9,7 @@
     color: manager.$main-color;
     display: grid;
     flex-shrink: 0;
+    
     scroll-snap-align: start;
     scroll-snap-stop: always;
     grid-template-columns: repeat(6, 1fr);
@@ -23,6 +24,12 @@
     gap: 15px;
     z-index: 2;
     position: relative;
+    
+    @media (min-width: 600px) {
+        &:not(:has(.project__buttons)) .project__description {
+            grid-area: buttons;
+          }
+    }
     
 
     h2 {
@@ -48,7 +55,7 @@
         grid-area: title;
         gap: 0;
 
-        
+
     }
 
     &__buttons {
@@ -56,22 +63,40 @@
         gap: 20px;
         grid-area: buttons;
         z-index: 2;
+
         a {
             text-decoration: none;
-            color: manager.$main-color;
+            color: manager.$secondary-color;
             height: 3.12em;
             padding: 0 20px;
-            background-color: #333333;
-            border: .3px solid #F9F9F9;
+            font-weight: 600;
+            background-color: manager.$main-color;
+            border: 3px solid manager.$secondary-color;
             @include manager.flex-center(row, center, center);
             gap: 5px;
+
+            //Original
+            // text-decoration: none;
+            // color: manager.$main-color;
+            // height: 3.12em;
+            // padding: 0 20px;
+            // background-color: #333333;
+            // border: .3px solid #F9F9F9;
+            // @include manager.flex-center(row, center, center);
+            // gap: 5px;
+
             .sourcecode {
                 width: 2.5em;
                 height: 2.5em;
             }
+
             .demo {
                 width: 2em;
                 height: 2em;
+            }
+
+            &:hover{
+                background-color: manager.$hover-main-color;
             }
 
             @media (min-width: 600px) and (max-width: 900px) {
@@ -85,20 +110,30 @@
         }
     }
 
-    &__description{
+    &__description {
         grid-area: descripcion;
-        
+
         @media (max-width: 600px) {
             padding-bottom: 35px;
+        }
+
+        & a{
+            color: manager.$main-color;
+            text-decoration: none;
+            font-weight: 700;
+            &:hover{
+                color: manager.$hover-main-color;
+            }
         }
     }
 
     &__typography {
         gap: 20px;
         grid-area: typography;
+
         @media (max-width: 600px) {
             margin-top: -25px;
-            
+
         }
     }
 
@@ -106,12 +141,13 @@
         grid-area: colores;
         gap: 15px;
 
-        
+
         &__seccion {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             align-items: start;
             gap: 10px 25px;
+
             @media (max-width: 600px) {
                 grid-template-columns: repeat(3, min-content);
                 justify-content: space-between;
@@ -133,24 +169,25 @@
         width: 100%;
         max-width: 100%;
         padding: 10px;
-        
+
         &__portrait {
             object-fit: contain;
             max-width: inherit;
         }
 
-        @media (min-width: 600px) and (max-width: 900px){
-            
-                padding: 0;
-                &__portrait{
-                    object-fit: cover;
-                }
-            
+        @media (min-width: 600px) and (max-width: 900px) {
+
+            padding: 0;
+
+            &__portrait {
+                object-fit: cover;
+            }
+
         }
 
         @media (max-width: 600px) {
             margin-top: -25px;
-            
+
         }
     }
 
@@ -159,7 +196,7 @@
         gap: 15px;
     }
 
-    @mixin fondo-projects{
+    @mixin fondo-projects {
         content: "";
         position: absolute;
         top: -100%;
@@ -168,121 +205,129 @@
         width: 100%;
         z-index: -1;
         pointer-events: none;
-        @media (max-height: clamp(37.5rem, 0rem + 100vw, 56.25rem)){
+
+        @media (max-height: clamp(37.5rem, 0rem + 100vw, 56.25rem)) {
             top: 0;
             height: 100%;
         }
-        @media (max-width: 600px){
+
+        @media (max-width: 600px) {
             display: none;
         }
     }
 
-    &::before{
+    &::before {
         @include fondo-projects();
     }
+
     &__bbracing-webapp::before {
         background: linear-gradient(to right, #181818, #474747);
-        
+
     }
 
-    &__boxedcat::before{
+    &__boxedcat::before {
         background: linear-gradient(to right, #192A3D, #451B15);
-        
+
     }
 
-    &__frenetic-comics::before{
+    &__frenetic-comics::before {
         background: linear-gradient(to right, #0F0F0F 60%, #A3847E 100%);
-        
+
     }
 
-    &__sodastereo-fanpage::before{
+    &__sodastereo-fanpage::before {
         background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
+
     }
 
-    &__bbracing-iframe::before{
+    &__bbracing-iframe::before {
         background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
+
     }
 
 
-    &__kz-group::before{
+    &__kz-group::before {
         background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
+
     }
 
     @media (max-height: 900px) and (min-height: 700px) and (min-width: 600px) {
         font-size: 0.9rem;
     }
 
-    @media (max-height: 700px) and (min-width: 600px){
+    @media (max-height: 700px) and (min-width: 600px) {
         font-size: 0.8rem;
     }
 
-    @media (min-width: 600px) and (max-width: 900px){
+    @media (min-width: 600px) and (max-width: 900px) {
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
-        "title title title title title"
-        "buttons buttons imgproject imgproject imgproject"
-        "descripcion descripcion imgproject imgproject imgproject"
-        "typography typography colores colores colores"
-        "styletile styletile gallery gallery gallery"
-    ;
-    font-size: clamp(0.6rem, 0.2rem + 1.067vw, 0.8rem);
-    max-height: clamp(37.5rem, 0rem + 100vw, 56.25rem);
-    
+            "title title title title title"
+            "buttons buttons imgproject imgproject imgproject"
+            "descripcion descripcion imgproject imgproject imgproject"
+            "typography typography colores colores colores"
+            "styletile styletile gallery gallery gallery"
+        ;
+        font-size: clamp(0.6rem, 0.2rem + 1.067vw, 0.8rem);
+        max-height: clamp(37.5rem, 0rem + 100vw, 56.25rem);
+
     }
 
-    @media (max-width: 600px){
-        grid-template-columns: 1fr;
+    @media (max-width: 600px) {
+        grid-template-columns: 100%;
         grid-template-areas:
-        "title"
-        "buttons"
-        "imgproject"
-        "descripcion"
-        "typography"
-        "colores"
-        "styletile"
-        "gallery"
-    ;
-    max-height: none;
-    min-height: max-content;
-    overflow-x: hidden;
-    padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
-    row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);
-    align-content: flex-start;
-    font-size: clamp(0.5rem, -0.071rem + 2.857vw, 1rem);
-    &__bbracing-webapp {
-        background: linear-gradient(to right, #181818, #474747);
-        
+            "title"
+            "buttons"
+            "imgproject"
+            "descripcion"
+            "typography"
+            "colores"
+            "styletile"
+            "gallery"
+        ;
+        max-height: none;
+        min-height: max-content;
+        overflow-x: hidden;
+        padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
+        row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);
+        align-content: flex-start;
+        font-size: clamp(0.5rem, -0.071rem + 2.857vw, 1rem);
+
+        &__bbracing-webapp {
+            background: linear-gradient(to right, #181818, #474747);
+
+        }
+
+        &__boxedcat {
+            background: linear-gradient(to right, #192A3D, #451B15);
+
+        }
+
+        &__frenetic-comics {
+            background: linear-gradient(to right, #0F0F0F 60%, #A3847E 100%);
+
+        }
+
+        &__sodastereo-fanpage {
+            background: linear-gradient(to right, #181818 50%, #656565 100%);
+
+        }
+
+        &__bbracing-iframe {
+            background: linear-gradient(to right, #181818 50%, #656565 100%);
+
+        }
+
+
+        &__kz-group {
+            background: linear-gradient(to right, #181818 50%, #656565 100%);
+
+        }
+
     }
 
-    &__boxedcat{
-        background: linear-gradient(to right, #192A3D, #451B15);
-        
-    }
-
-    &__frenetic-comics{
-        background: linear-gradient(to right, #0F0F0F 60%, #A3847E 100%);
-        
-    }
-
-    &__sodastereo-fanpage{
-        background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
-    }
-
-    &__bbracing-iframe{
-        background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
-    }
-
-
-    &__kz-group{
-        background: linear-gradient(to right, #181818 50%, #656565 100%);
-        
-    }
-
+    @media (min-width: 900px) and (max-width: 1320px) and (max-height: 1000px) {
+        font-size: clamp(0.75rem, 0.536rem + 0.381vw, 0.85rem);
     }
 
 }
@@ -320,7 +365,7 @@
     }
 
     &__frenetic-comics1 {
-        
+
         font-size: 7em;
         font-weight: 700;
 
@@ -349,10 +394,10 @@
     }
 
     @media (max-width: 600px) {
-        & > * {
+        &>* {
             margin-top: 0;
         }
-        
+
     }
 }
 
@@ -361,6 +406,7 @@
     font-size: 0.85em;
     font-weight: 500;
     gap: 5px;
+
     @media (max-width: 600px) {
         font-size: 1.1em;
     }
@@ -460,15 +506,13 @@
     gap: 15px;
 
     &__img {
-        width: 100%;
-        height: 100%;
-        max-width: 8em;
-        max-height: 8em;
+        width: 8em;
+        height: 8em;
         border: .3px solid #F9F9F9;
-
+        object-fit: cover;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             filter: brightness(90%);
         }
 
@@ -476,20 +520,113 @@
 }
 
 .galeria {
+    
     @include manager.flex-center(row, flex-start, center);
     gap: 15px;
     overflow-x: auto;
+    
+    width: 100%;
     &__img {
-        width: 100%;
-        height: 100%;
-        max-width: 8em;
-        max-height: 8em;
+        width: 8em;
+        height: 8em;
         border: .3px solid #F9F9F9;
         cursor: pointer;
-
-        &:hover{
+        object-fit: cover;
+        flex-shrink: 0;
+        flex-grow: 0;
+        &:hover {
             filter: brightness(90%);
         }
 
+    }
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.97);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#popup.active {
+    display: flex;
+}
+
+#popup-image {
+    max-width: 85%;
+    max-height: 90%;
+    
+    cursor: pointer;
+
+    @media (max-width: 600px) {
+        max-height: 80%;
+        max-width: 75%;
+        
+    }
+}
+
+#popup-image.slide-in-left {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+#popup-image.slide-in-right {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+#popup-image.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.popup-close,
+.popup-prev,
+.popup-next {
+    position: absolute;
+    filter: brightness(0) saturate(100%) invert(99%) sepia(98%) saturate(38%) hue-rotate(269deg) brightness(109%) contrast(95%);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.popup-close {
+    top: 50px;
+    right: 30px;
+    width: 35px;
+    @media (max-width: 600px) {
+        top: 30px;
+        width: 30px;
+     }
+}
+
+.popup-prev {
+    top: 50%;
+    left: 30px;
+    padding: 30px 0;
+    transform: translateY(-50%) rotate(180deg);
+    width: 24px;
+    @media (max-width: 600px) {
+       left: 10px;
+       
+    }
+}
+
+.popup-next {
+    top: 50%;
+    padding: 30px 0;
+    right: 30px;
+    transform: translateY(-50%);
+    width: 24px;
+
+    @media (max-width: 600px) {
+        right: 10px;
     }
 }

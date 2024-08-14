@@ -26,8 +26,6 @@
             border: none;
             outline: none;
 
-            &::placeholder {}
-
             &:focus {
                 outline: none;
                 border: none;
@@ -45,6 +43,10 @@
             background-color: #333333;
             padding: 10px 0;
             border: .3px solid manager.$main-color;
+
+            &:hover{
+                background-color: #424242;
+            }
         }
 
     }

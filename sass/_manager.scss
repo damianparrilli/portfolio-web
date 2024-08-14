@@ -32,9 +32,46 @@ html{
     }
 }
 
+img{
+    user-drag: none;
+        -webkit-user-drag: none;
+}
+
 body{
     background-color: $main-color;
     overflow: hidden;
+}
+
+.loader{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: $main-color;
+    z-index: 100;
+    opacity: 1;
+    @include flex-center(row, center, center);
+    display: none;
+    & img{
+        width: 10%;
+    }
+    transition: 1s ease-in-out;
+}
+
+@media (hover: none) {
+  .nav-menu__buttons a {
+    cursor: default;
+  }
+}
+#loader{
+    width: 40%;
+    height: 40%;
+}
+
+.loaded{
+    pointer-events: none;
+    opacity: 0;
 }
 
 .container{
@@ -42,7 +79,6 @@ body{
     height: 100vh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
- 
     
     & > * {
         scroll-snap-align: start;
