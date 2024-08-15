@@ -28,33 +28,28 @@ let animation = bodymovin.loadAnimation({
 });
 
 window.addEventListener("load", function () {
-  document.querySelector(".loader").classList.add("loaded");
+  const loaderDiv = document.querySelector(".loader");
+  loaderDiv.classList.add("loaded");
   loader.stop();
   adjustHeight();
+  setTimeout(() => {
+    loaderDiv.remove();
+  }, 1000);
 });
 
 
-document.querySelectorAll('.nav-menu__buttons a').forEach(anchor => {
-  const navegar = function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({
-      behavior: 'smooth'
-    });
-    botones.classList.remove("active");
-  };
 
-
-  if (window.innerWidth <= 900) {
-    anchor.addEventListener('touchend', navegar);
-  } else {
-    anchor.addEventListener('click', navegar);
-  }
-});
 
 document.addEventListener('DOMContentLoaded', () => {
-  const sections = document.querySelectorAll('.nav-menu');
 
-  const observerFade = new IntersectionObserver((entries) => {
+  const containerDiv = document.querySelector(".container");
+
+  const sections = document.querySelectorAll('.nav-menu');
+const botones = document.querySelector(".nav-menu__buttons");
+let observerActive = true; 
+
+const observerFade = new IntersectionObserver((entries) => {
+  if (observerActive) { 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('fade');
@@ -70,11 +65,44 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     });
-  }, { threshold: [0.5] });
+  }
+}, { threshold: [0.5], rootMargin: '0px 0px -20px 0px' });
 
-  sections.forEach(section => {
-    observerFade.observe(section);
+sections.forEach(section => {
+  observerFade.observe(section);
+});
+
+document.querySelectorAll('.nav-menu__buttons a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href').substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      observerActive = false;
+
+      sections.forEach(section => {
+        section.classList.add('fade-out');
+        section.classList.remove('fade');
+      });
+
+      targetElement.classList.add('fade');
+      targetElement.classList.remove('fade-out');
+
+      containerDiv.scrollTo({
+        top: targetElement.offsetTop,
+        behavior: 'smooth'
+      });
+
+      setTimeout(() => {
+        observerActive = true;
+      }, 500); 
+
+      botones.classList.remove("active");
+    }
   });
+});
+
 
   const container = document.querySelector('.contenido__projects');
   const items = document.querySelectorAll('.project');
