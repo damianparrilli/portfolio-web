@@ -42,7 +42,7 @@ body{
     overflow: hidden;
 }
 
-.loader{
+.loader-div{
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -52,7 +52,6 @@ body{
     z-index: 100;
     opacity: 1;
     @include flex-center(row, center, center);
-    display: none;
     & img{
         width: 10%;
     }

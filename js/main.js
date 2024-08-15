@@ -27,8 +27,8 @@ let animation = bodymovin.loadAnimation({
   path: './js/animacion.json'
 });
 
-window.addEventListener("load", function () {
-  const loaderDiv = document.querySelector(".loader");
+animation.addEventListener('DOMLoaded', function () {
+  const loaderDiv = document.querySelector(".loader-div");
   loaderDiv.classList.add("loaded");
   loader.stop();
   adjustHeight();

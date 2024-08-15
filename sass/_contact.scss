@@ -6,16 +6,37 @@
     gap: 50px;
     overflow-x: hidden;
     position: relative;
-    max-height:  max-content;
+    max-height: max-content;
+
     &__form {
         max-width: 670px;
         width: 100%;
         gap: 25px;
+
+        pointer-events: none;
+        position: relative;
         @include manager.flex-center(column, center, flex-start);
+
+        &__work {
+            position: absolute;
+            opacity: 1;
+            width: 80%;
+            height: 80%;
+            object-fit: contain;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            @media (max-width: 600px) {
+                width: 95%;
+                height: 95%;
+            }
+        }
 
         h2 {
             color: manager.$main-color;
             font-size: 1.5em;
+            opacity: 0.3;
         }
 
         input,
@@ -25,6 +46,7 @@
             padding: 10px;
             border: none;
             outline: none;
+            opacity: 0.3;
 
             &:focus {
                 outline: none;
@@ -44,7 +66,7 @@
             padding: 10px 0;
             border: .3px solid manager.$main-color;
 
-            &:hover{
+            &:hover {
                 background-color: #424242;
             }
         }
@@ -59,6 +81,7 @@
 
         position: relative;
         z-index: 2;
+
         @media (max-width: 600px) {
             padding: 0 25px;
         }
@@ -71,8 +94,9 @@
             @media (max-width: 600px) {
                 font-size: clamp(0.65rem, 0.479rem + 0.857vw, 0.8rem);
             }
-            &:hover{
-             filter: brightness(90%);
+
+            &:hover {
+                filter: brightness(90%);
             }
         }
 
@@ -108,7 +132,7 @@
             width: 5.125em;
             height: auto;
 
-           
+
         }
 
 
