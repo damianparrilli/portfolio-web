@@ -291,7 +291,7 @@
         padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
         row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);
         align-content: flex-start;
-        font-size: clamp(0.5rem, -0.071rem + 2.857vw, 1rem);
+        font-size: clamp(0.75rem, 0.464rem + 1.429vw, 1rem);
 
         &__bbracing-webapp {
             background: linear-gradient(to right, #181818, #474747);
@@ -408,7 +408,7 @@
     gap: 5px;
 
     @media (max-width: 600px) {
-        font-size: 1.1em;
+        font-size: clamp(0.75em, 0.464em + 1.429vw, 1em);
     }
 
     &::before {

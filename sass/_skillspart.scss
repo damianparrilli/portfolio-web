@@ -50,6 +50,9 @@
             li {
                 margin-left: 2em;
                 font-size: 0.9em;
+                @media (max-width: 600px){
+                    font-size: 0.95em;
+                }
             }
         }
     }
@@ -62,6 +65,10 @@
     width: 100%;
     font-size: 0.9em;
     grid-auto-rows: auto;
+
+    @media (max-width: 600px){
+        font-size: 0.95em;
+    }
 }
 
 .herramientas {
@@ -101,6 +108,8 @@
             height: auto;
             object-fit: contain;
         }
+
+        
     }
 
     &__habilidades{

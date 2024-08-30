@@ -744,6 +744,11 @@ body {
   margin-left: 2em;
   font-size: 0.9em;
 }
+@media (max-width: 600px) {
+  .experiencia__individual ul li {
+    font-size: 0.95em;
+  }
+}
 
 .herramientas__section {
   display: flex;
@@ -761,6 +766,11 @@ body {
   font-size: 0.9em;
   grid-auto-rows: auto;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  .herramientas__lista {
+    font-size: 0.95em;
+  }
 }
 .herramientas__lista > :nth-child(1) {
   grid-column: 1;
@@ -831,6 +841,11 @@ body {
   font-size: 0.9em;
   grid-auto-rows: auto;
   gap: 20px;
+}
+@media (max-width: 600px) {
+  .herramientas__habilidades__lista {
+    font-size: 0.95em;
+  }
 }
 .herramientas__habilidades__lista > :nth-child(1) {
   grid-column: 1;
@@ -1115,7 +1130,7 @@ body {
     padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
     row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);
     align-content: flex-start;
-    font-size: clamp(0.5rem, -0.071rem + 2.857vw, 1rem);
+    font-size: clamp(0.75rem, 0.464rem + 1.429vw, 1rem);
   }
   .project__bbracing-webapp {
     background: linear-gradient(to right, #181818, #474747);
@@ -1210,7 +1225,7 @@ body {
 }
 @media (max-width: 600px) {
   .colores {
-    font-size: 1.1em;
+    font-size: clamp(0.75em, 0.464em + 1.429vw, 1em);
   }
 }
 .colores::before {
