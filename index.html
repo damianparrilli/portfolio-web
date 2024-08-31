@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preload" href="./css/style.css" as="style">
+    <link rel="preload" as="image" href="./img/diploma-cac.webp">
+    <link rel="preload" as="image" href="./img/diploma-unlp.webp">
     <title>Damián Parrilli - Portfolio Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-        <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-        <link rel="manifest" href="./img/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+    <link rel="manifest" href="./img/site.webmanifest">
 </head>
 
 <body>
@@ -109,7 +111,7 @@
                 <div class="contenido__skills">
                     <div class="formacion">
                         <h2>Formación</h2>
-                        <a class="formacion__individual">
+                        <a class="formacion__individual unlp">
                             <img src="./img/unlp.webp" alt="UNLP" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Licenciatura en Diseño Multimedial</h3>
@@ -117,7 +119,7 @@
                                 <p>2018 - feb. 2024</p>
                             </div>
                         </a>
-                        <a class="formacion__individual">
+                        <a class="formacion__individual cac">
                             <img src="./img/codo-a-codo.webp" alt="Codo a Codo 4.0" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Curso Full-Stack NodeJS</h3>
@@ -139,7 +141,8 @@
                             <h3>Ayudante y Tutor de Programación en Unity</h3>
                             <p>Facultad de Artes - UNLP</p>
                             <p>sept. 2023 - Actualidad</p>
-                            <p>Cátedra Taller de Diseño de Experiencias Interactivas (ex. Taller de Diseño Multimedial 1)</p>
+                            <p>Cátedra Taller de Diseño de Experiencias Interactivas (ex. Taller de Diseño Multimedial
+                                1)</p>
                             <ul>
                                 <li>Despejé y resolví dudas de los alumnos a partir de la programación en Unity con C#.
                                 </li>
@@ -154,7 +157,8 @@
                             <p>B&B Racing Parts</p>
                             <ul>
                                 <li>Realicé el diseño de la WebApp OnePage, incluyendo el Login. (Abril 2024)</li>
-                                <li>Realicé el desarrollo de un iframe para la descripción de productos de la plataforma de Ebay. (Mayo 2024)</li>
+                                <li>Realicé el desarrollo de un iframe para la descripción de productos de la plataforma
+                                    de Ebay. (Mayo 2024)</li>
                             </ul>
                         </div>
 
@@ -210,6 +214,10 @@
                     </div>
 
                 </div>
+            </div>
+            <div id="popup-skill">
+                <img src="./img/close.svg" alt="Close" class="popup-close-skill">
+                <img id="popup-image-skill" src="" alt="Popup Image">
             </div>
         </div>
         <div class="nav-menu" id="projects">
@@ -318,17 +326,17 @@
                         </div>
                         <div class="project__gallery">
                             <h3>Galería</h3>
-                            
+
                             <div class="galeria" data-gallery="2">
-                                
+
                                 <img src="./img/boxedcat1.webp" alt="BoxedCat Gallery 1" class="galeria__img"
                                     data-index="0">
                                 <img src="./img/boxedcat2.webp" alt="BoxedCat Gallery 2" class="galeria__img"
                                     data-index="1">
                                 <img src="./img/boxedcat3.webp" alt="BoxedCat Gallery 3" class="galeria__img"
                                     data-index="2">
-                            
-                        </div>
+
+                            </div>
                         </div>
 
                     </div>
@@ -380,12 +388,12 @@
                         <div class="project__gallery">
                             <h3>Galería</h3>
                             <div class="galeria" data-gallery="3">
-                                <img src="./img/freneticcomics1.webp" alt="Frenetic Comics Gallery 1" class="galeria__img"
-                                    data-index="0">
-                                <img src="./img/freneticcomics2.webp" alt="Frenetic Comics Gallery 2" class="galeria__img"
-                                    data-index="1">
-                                <img src="./img/freneticcomics3.webp" alt="Frenetic Comics Gallery 3" class="galeria__img"
-                                    data-index="2">
+                                <img src="./img/freneticcomics1.webp" alt="Frenetic Comics Gallery 1"
+                                    class="galeria__img" data-index="0">
+                                <img src="./img/freneticcomics2.webp" alt="Frenetic Comics Gallery 2"
+                                    class="galeria__img" data-index="1">
+                                <img src="./img/freneticcomics3.webp" alt="Frenetic Comics Gallery 3"
+                                    class="galeria__img" data-index="2">
                             </div>
                         </div>
 
@@ -412,7 +420,9 @@
                         </div>
                         <div class="project__description">
                             <p>Un iframe para la descripción de productos de Ebay, para la empresa B&B Racing Parts. Es
-                                Mobile First y Responsive, y esta hecha solo con HTML y CSS incluido en el Style debido a que Ebay no permite uso de programación. La Demo muestra cómo se vería en el dispositivo que
+                                Mobile First y Responsive, y esta hecha solo con HTML y CSS incluido en el Style debido
+                                a que Ebay no permite uso de programación. La Demo muestra cómo se vería en el
+                                dispositivo que
                                 estuvieras abriendo la página, pero para casos reales, recomiendo ir a ver productos que
                                 contengan este tipo de descripciones en <a href="https://www.ebay.com/str/bbsupplyllc"
                                     target="_blank">B&B Supply LLC Ebay.</a>
@@ -436,10 +446,10 @@
                         <div class="project__gallery">
                             <h3>Galería</h3>
                             <div class="galeria" data-gallery="5">
-                                <img src="./img/bbracingiframe1.webp" alt="BBRacing Iframe Gallery 1" class="galeria__img"
-                                    data-index="0">
-                                <img src="./img/bbracingiframe2.webp" alt="BBRacing Iframe Gallery 2" class="galeria__img"
-                                    data-index="1">
+                                <img src="./img/bbracingiframe1.webp" alt="BBRacing Iframe Gallery 1"
+                                    class="galeria__img" data-index="0">
+                                <img src="./img/bbracingiframe2.webp" alt="BBRacing Iframe Gallery 2"
+                                    class="galeria__img" data-index="1">
                             </div>
                         </div>
 
@@ -532,10 +542,10 @@
                         <div class="project__style-tile">
                             <h3>Style tile</h3>
                             <div class="styletile" data-styletile="5">
-                                <img src="./img/KZGroupStyletile_1.webp" alt="KZ Group Styletile 1" class="styletile__img"
-                                    data-index="0">
-                                <img src="./img/KZGroupStyletile_2.webp" alt="KZ Group Styletile 2" class="styletile__img"
-                                    data-index="1">
+                                <img src="./img/KZGroupStyletile_1.webp" alt="KZ Group Styletile 1"
+                                    class="styletile__img" data-index="0">
+                                <img src="./img/KZGroupStyletile_2.webp" alt="KZ Group Styletile 2"
+                                    class="styletile__img" data-index="1">
                             </div>
                         </div>
                         <div class="project__img"><img src="./img/kzgroup-img.webp" alt="BBracing Parts"
@@ -550,7 +560,7 @@
                                     data-index="1">
                                 <img src="./img/kz-group3.webp" alt="KZ Group Gallery 3" class="galeria__img"
                                     data-index="2">
-                                    <img src="./img/kz-group4.webp" alt="KZ Group Gallery 3" class="galeria__img"
+                                <img src="./img/kz-group4.webp" alt="KZ Group Gallery 3" class="galeria__img"
                                     data-index="3">
                             </div>
                         </div>

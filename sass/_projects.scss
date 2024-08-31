@@ -104,9 +104,30 @@
             }
 
             @media (max-width: 600px) {
-                padding: 0;
-                width: 100%;
+                
+                
             }
+
+            
+        }
+
+        & > :first-child{
+            @media (max-width: 600px) {
+                width: 100%;
+                padding: 0 10px;
+            }
+        }
+
+        & > :last-child{
+            @media (max-width: 600px) {
+                width: max-content;
+                padding: 0 15px;
+                
+            }
+        }
+
+        @media (max-width: 600px) {
+            gap: 5px;
         }
     }
 

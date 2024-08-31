@@ -202,6 +202,7 @@ const closeBtn = document.querySelector('.popup-close');
 const prevBtn = document.querySelector('.popup-prev');
 const nextBtn = document.querySelector('.popup-next');
 
+
 let currentGallery = null;
 let currentIndex = 0;
 
@@ -214,6 +215,8 @@ galeria.forEach(gallery => {
     }
   });
 });
+
+
 
 styletile.forEach(styletiles => {
   styletiles.addEventListener('click', (event) => {
@@ -251,3 +254,42 @@ function updatePopupImage() {
 popupImage.addEventListener('click', () => {
   window.open(popupImage.src, '_blank');
 });
+
+
+const certificados = [
+  './img/diploma-unlp.webp',
+  './img/diploma-cac.webp',
+];
+
+const educacion = document.querySelectorAll('.formacion__individual');
+const popupSkill = document.getElementById('popup-skill');
+const popupImageSkill = document.getElementById('popup-image-skill');
+const closeBtnSkill = document.querySelector('.popup-close-skill');
+
+educacion.forEach(formacion => {
+  formacion.addEventListener('click', (event) => {
+    let imgSrc;
+    if (formacion.classList.contains('unlp')) {
+      imgSrc = certificados[0];
+    }
+    if (formacion.classList.contains('cac')) {
+      imgSrc = certificados[1];
+      
+    }
+    openPopupSkill(imgSrc);
+  });
+});
+
+function openPopupSkill(imageSrc) {
+  popupImageSkill.src = imageSrc;
+  popupSkill.classList.add('active');
+}
+
+closeBtnSkill.addEventListener('click', () => {
+  popupSkill.classList.remove('active');
+});
+
+popupImageSkill.addEventListener('click', () => {
+  window.open(popupImageSkill.src, '_blank');
+});
+
