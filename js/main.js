@@ -45,6 +45,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const containerDiv = document.querySelector(".container");
 
   const sections = document.querySelectorAll('.nav-menu');
+
+  setTimeout(() => {
+    sections.forEach(section => {
+      if (section.classList.contains('lazy')) {
+          section.classList.remove('lazy');
+      }
+  });
+  }, 1000); 
+
 const botones = document.querySelector(".nav-menu__buttons");
 let observerActive = true; 
 

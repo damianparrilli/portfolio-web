@@ -284,6 +284,9 @@ h1 {
     top: calc(50% - 60px);
   }
 }
+.nav-menu.lazy {
+  display: none;
+}
 
 #popup-open {
   position: absolute;

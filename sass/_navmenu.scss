@@ -204,6 +204,11 @@ $desktop-tablet: 80px;
         }
     }
 
+   
+    &.lazy{
+        display: none;
+    }
+    
 }
 
 #popup-open{
