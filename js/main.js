@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const sections = document.querySelectorAll('.nav-menu');
 
+
   setTimeout(() => {
     sections.forEach(section => {
       if (section.classList.contains('lazy')) {
@@ -53,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
   });
   }, 1000); 
+  
+
 
 const botones = document.querySelector(".nav-menu__buttons");
 let observerActive = true; 

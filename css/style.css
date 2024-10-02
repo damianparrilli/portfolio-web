@@ -203,6 +203,9 @@ h1 {
     pointer-events: all;
   }
 }
+.nav-menu.lazy {
+  display: none;
+}
 .nav-menu__title {
   font-size: 1.2em;
   position: absolute;
@@ -283,9 +286,6 @@ h1 {
     left: -35px;
     top: calc(50% - 60px);
   }
-}
-.nav-menu.lazy {
-  display: none;
 }
 
 #popup-open {
