@@ -29,7 +29,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
+        position: relative;
         #animacion {
             width: 90%;
             height: 90%;
@@ -139,6 +139,7 @@
         -ms-overflow-style: none;
         position: relative;
         overflow-y: hidden;
+        
 
         @media (max-width: 600px) {
             overflow-y: auto;

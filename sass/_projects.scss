@@ -1,6 +1,8 @@
 @use 'manager';
 
 .project {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
     align-content: space-evenly;
     padding: 20px 40px;
     width: 100%;
@@ -9,9 +11,6 @@
     color: manager.$main-color;
     display: grid;
     flex-shrink: 0;
-    
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: max-content;
     grid-template-areas:
@@ -37,18 +36,19 @@
         font-weight: 600;
     }
 
-    h4 {
+    h3 {
         font-size: 1.2em;
         font-weight: 300;
     }
 
-    h3 {
+    h4 {
         font-size: 1.3em;
         font-weight: 500;
     }
 
     &>* {
         @include manager.flex-center(column, flex-start, flex-start);
+        
     }
 
     &__title {
@@ -306,8 +306,6 @@
             "styletile"
             "gallery"
         ;
-        max-height: none;
-        min-height: max-content;
         overflow-x: hidden;
         padding: clamp(1.25rem, -0.179rem + 7.143vw, 2.5rem);
         row-gap: clamp(1.563rem, -0.223rem + 8.929vw, 3.125rem);

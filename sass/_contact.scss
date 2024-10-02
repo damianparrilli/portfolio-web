@@ -8,69 +8,88 @@
     position: relative;
     max-height: max-content;
 
-    &__form {
-        max-width: 670px;
+    &__items {
+        @include manager.flex-center(row, space-between, center);
         width: 100%;
-        gap: 25px;
+        max-width: 900px;
+        gap: 15px;
+        color: white;
 
-        pointer-events: none;
-        position: relative;
-        @include manager.flex-center(column, center, flex-start);
-
-        &__work {
-            position: absolute;
-            opacity: 1;
-            width: 80%;
-            height: 80%;
-            object-fit: contain;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            @media (max-width: 600px) {
-                width: 95%;
-                height: 95%;
-            }
-        }
-
-        h2 {
-            color: manager.$main-color;
-            font-size: 1.5em;
-            opacity: 0.3;
-        }
-
-        input,
-        textarea {
+        &__individual {
+            @include manager.flex-center(column, flex-start, center);
             width: 100%;
-            font-size: 1.1em;
-            padding: 10px;
-            border: none;
-            outline: none;
-            opacity: 0.3;
+            height: 100%;
+            padding: 30px 0;
+            min-height: 200px;
+            min-width: 150px;
+            background-color: #222;
+            border: 1px solid #757575;
+            gap: 15px;
 
-            &:focus {
-                outline: none;
-                border: none;
+            & h2 {
+                font-size: 1.2em;
+                margin-bottom: 15px;
+            }
+
+            & svg {
+                height: 35px;
+            }
+
+            & p{
+                padding: 10px 25px;
+            }
+
+            & a {
+                text-decoration: none;
+                color: manager.$secondary-color;
+                height: min-content;
+                padding: 10px 25px;
+                font-weight: 600;
+                background-color: manager.$main-color;
+                border: 3px solid manager.$secondary-color;
+                @include manager.flex-center(row, space-evenly, center);
+                gap: 10px;
+
+                & svg {
+                    fill: #333333;
+                    width: auto;
+                    height: 1em;
+                }
+
+                &:hover {
+                    color: manager.$secondary-color;
+                    background-color: manager.$hover-main-color;
+
+                }
+            }
+
+        }
+
+        @media (min-width: 600px) and (max-width: 750px) {
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 600px) {
+            flex-wrap: wrap;
+            gap: 10px;
+            & >:first-child, & > :nth-child(2){
+                flex: 1 1 20%;
+                height: auto;
+            }
+
+            & > :last-child{
+                flex: 1 1 100%;
+                height: auto;
+                width: 100%;
+            }
+
+            &__individual{
+                min-height: min-content;
+                h2{
+                    margin-bottom: 0;
+                }
             }
         }
-
-        textarea {
-            height: 100px;
-            resize: none;
-            field-sizing: content;
-        }
-
-        #submit {
-            color: manager.$main-color;
-            background-color: #333333;
-            padding: 10px 0;
-            border: .3px solid manager.$main-color;
-
-            &:hover {
-                background-color: #424242;
-            }
-        }
-
     }
 
     &__redes {
@@ -86,7 +105,7 @@
             padding: 0 25px;
         }
 
-        svg {
+        & svg {
             fill: manager.$main-color;
             width: 3.5em;
             height: 3.5em;
@@ -145,7 +164,7 @@
         }
     }
 
-    @media (min-height: 600px) and (max-height: 975px) {
+    @media (max-height: 650px) {
         justify-content: flex-start;
     }
 

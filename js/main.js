@@ -52,6 +52,7 @@ const observerFade = new IntersectionObserver((entries) => {
   if (observerActive) { 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
+        
         entry.target.classList.add('fade');
         entry.target.classList.remove('fade-out');
         if (entry.target.id === 'banner') {
@@ -256,40 +257,4 @@ popupImage.addEventListener('click', () => {
 });
 
 
-const certificados = [
-  './img/diploma-unlp.webp',
-  './img/diploma-cac.webp',
-];
-
-const educacion = document.querySelectorAll('.formacion__individual');
-const popupSkill = document.getElementById('popup-skill');
-const popupImageSkill = document.getElementById('popup-image-skill');
-const closeBtnSkill = document.querySelector('.popup-close-skill');
-
-educacion.forEach(formacion => {
-  formacion.addEventListener('click', (event) => {
-    let imgSrc;
-    if (formacion.classList.contains('unlp')) {
-      imgSrc = certificados[0];
-    }
-    if (formacion.classList.contains('cac')) {
-      imgSrc = certificados[1];
-      
-    }
-    openPopupSkill(imgSrc);
-  });
-});
-
-function openPopupSkill(imageSrc) {
-  popupImageSkill.src = imageSrc;
-  popupSkill.classList.add('active');
-}
-
-closeBtnSkill.addEventListener('click', () => {
-  popupSkill.classList.remove('active');
-});
-
-popupImageSkill.addEventListener('click', () => {
-  window.open(popupImageSkill.src, '_blank');
-});
 

@@ -3,17 +3,20 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Web Designer - Frontend Developer | Damián Parrilli">
+    <meta name="description"
+        content="Mi nombre es Damián Parrilli, soy un entusiasta del diseño y desarrollo de interfaces web enfocado en la resolución de problemas respecto a la experiencia de usuario">
+    <meta name="keywords"
+        content="Diseñador Web, Web Designer, Desarrollador Frontend, Frontend Developer, Multimedia Design">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="preload" href="./css/style.css" as="style">
-    <link rel="preload" as="image" href="./img/diploma-cac.webp">
-    <link rel="preload" as="image" href="./img/diploma-unlp.webp">
     <title>Damián Parrilli - Portfolio Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rajdhani:wght@300;400;500;600;700&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"></noscript>
+
     <link rel="apple-touch-icon" sizes="180x180" href="./img/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
@@ -31,13 +34,21 @@
                 <li class="nav-menu__btn"><a href="#skills">skills</a></li>
                 <li class="nav-menu__btn"><a href="#projects">projects</a></li>
                 <li class="nav-menu__btn"><a href="#contact">contact</a></li>
-                <img id="popup-close" src="./img/close.svg" alt="Hamburguer Menu">
+                <li id="popup-close"><svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M1.39989 13.308L0.691895 12.6L6.29189 7.00002L0.691895 1.40002L1.39989 0.692017L6.99989 6.29202L12.5999 0.692017L13.3079 1.40002L7.70789 7.00002L13.3079 12.6L12.5999 13.308L6.99989 7.70802L1.39989 13.308Z"
+                            fill="black" />
+                    </svg>
+                </li>
             </ul>
-            <a id="popup-open"><img src="./img/menu.svg" alt="Hamburguer Menu"></a>
+            <a id="popup-open"><svg viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 12V10H18V12H0ZM0 7V5H18V7H0ZM0 2V0H18V2H0Z" fill="#131313" />
+                </svg></a>
             <div class="contenido">
                 <div id="animacion"></div>
+                <h1>Web Designer - Frontend Developer</h1>
                 <div class="redes-banner">
-                    <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
+                    <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank" aria-label="Ir a mi perfil de LinkedIn">
                         <svg class="redes-banner__ind" viewBox="0 0 83 83" fill="none"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -45,7 +56,7 @@
                         </svg>
 
                     </a>
-                    <a href="https://github.com/damianparrilli" target="_blank"><svg class="redes-banner__ind"
+                    <a href="https://github.com/damianparrilli" target="_blank" aria-label="Ir a mi perfil de GitHub"><svg class="redes-banner__ind"
                             viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <rect x="0.00012207" y="78.0005" width="82.1533" height="4.1528" />
                             <rect y="6.10352e-05" width="82.1533" height="14.0834" />
@@ -83,8 +94,8 @@
                         </div>
                         <div class="face back" id="back">
                             <div class="back__texto">
-                                <a class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</a>
-                                <a class="back__texto__text"><b>Telefono:</b> +54 1160518730</a>
+                                <p class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</p>
+                                <p class="back__texto__text"><b>Teléfono:</b> +54 1160518730</p>
                                 <a href="https://drive.google.com/file/d/1A5Wpw9mBDjPdLU9VPdSDbtLBzCXVrfbk/view?usp=sharing"
                                     target="_blank" class="back__texto__button">Mi CV</a>
                             </div>
@@ -92,7 +103,8 @@
                         </div>
                     </div>
                 </div>
-                <p class="about-descripcion">Soy un apasionado en el diseño y desarrollo de interfaces web, y estoy en
+                <p class="about-descripcion">Licenciado en Diseño Multimedial. Soy un apasionado en el diseño y
+                    desarrollo de interfaces web, y estoy en
                     búsqueda de crecer adquiriendo conocimientos nuevos que permitan un mayor desarrollo profesional.
                     Tengo interés en la creación de plataformas web como solución a problemas de experiencias de
                     usuario, con el compromiso de generar interfaces funcionales, innovadoras y eficientes. Poseo
@@ -111,7 +123,8 @@
                 <div class="contenido__skills">
                     <div class="formacion">
                         <h2>Formación</h2>
-                        <a class="formacion__individual unlp">
+                        <a href="https://drive.google.com/file/d/1go7FVlLRiP2DpFFjB2de7JFpod_aYlTn/view?usp=sharing"
+                            class="formacion__individual" target="_blank">
                             <img src="./img/unlp.webp" alt="UNLP" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Licenciatura en Diseño Multimedial</h3>
@@ -119,7 +132,8 @@
                                 <p>2018 - feb. 2024</p>
                             </div>
                         </a>
-                        <a class="formacion__individual cac">
+                        <a href="https://drive.google.com/file/d/1xW-VXOoICHjnelmanJma_eU9xO9kIXiL/view?usp=sharing"
+                            class="formacion__individual" target="_blank">
                             <img src="./img/codo-a-codo.webp" alt="Codo a Codo 4.0" class="formacion__individual__img">
                             <div class="formacion__individual__desc">
                                 <h3>Curso Full-Stack NodeJS</h3>
@@ -234,10 +248,10 @@
                     <div class="project project__bbracing-webapp">
                         <div class="project__title">
                             <h2>B&B Racing Parts WebApp</h2>
-                            <h4>Diseño Web Desktop</h4>
+                            <h3>Diseño Web Desktop</h3>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__bbracing-webapp1">Aa</span>
                                 <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
@@ -250,7 +264,7 @@
                             </p>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__bbracing-webapp1">#171717</div>
                                 <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
@@ -261,7 +275,7 @@
                             </div>
                         </div>
                         <div class="project__style-tile">
-                            <h3>Style tile</h3>
+                            <h4>Style tile</h4>
                             <div class="styletile" data-styletile="1">
                                 <img src="./img/B&BRacingStyleTile_1.webp" alt="BBRacing Styletile 1"
                                     class="styletile__img" data-index="0">
@@ -273,7 +287,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
                             <div class="galeria" data-gallery="1">
                                 <img src="./img/bbracing-webappimg1.webp" alt="BBRacing Gallery 1" class="galeria__img"
                                     data-index="0">
@@ -288,14 +302,15 @@
                     <div class="project project__boxedcat">
                         <div class="project__title">
                             <h2>BoxedCat</h2>
-                            <h4>Maquetado Web Desktop Responsive</h4>
+                            <h3>Maquetado Web Desktop Responsive</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/boxedcat" target="_blank"><img
-                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                    src="./img/github-sourcecode.svg" alt="Source Code BoxedCat"
+                                    class="sourcecode">Source
                                 Code</a>
-                            <a href="https://boxedcat.netlify.app" target="_blank"><img src="./img/demo.svg" alt="Demo"
-                                    class="demo">Demo</a>
+                            <a href="https://boxedcat.netlify.app" target="_blank"><img src="./img/demo.svg"
+                                    alt="Demo BoxedCat" class="demo">Demo</a>
                         </div>
                         <div class="project__description">
                             <p>Una simulación de una nota, en este caso de una entrevista, en donde hay elementos
@@ -304,14 +319,14 @@
                                 HTML5, CSS3 y JavaScript puro.</p>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__boxedcat1">Aa</span>
                                 <span class="tipografia__boxedcat2">Roboto</span>
                             </div>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__boxedcat1">#69B9E7</div>
                                 <div class="colores colores__boxedcat2">#14273C</div>
@@ -325,7 +340,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
 
                             <div class="galeria" data-gallery="2">
 
@@ -343,18 +358,19 @@
                     <div class="project project__frenetic-comics">
                         <div class="project__title">
                             <h2>Frenetic Comics</h2>
-                            <h4>Diseño y maquetado de Landing Page - Mobile First y Responsive</h4>
+                            <h3>Diseño y maquetado de Landing Page - Mobile First y Responsive</h3>
 
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/frenetic-landing" target="_blank"><img
-                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                    src="./img/github-sourcecode.svg" alt="Source Code Frenetic Comics"
+                                    class="sourcecode">Source
                                 Code</a>
                             <a href="https://fernetic-comics.netlify.app" target="_blank"><img src="./img/demo.svg"
-                                    alt="Demo" class="demo">Demo</a>
+                                    alt="Demo Frenetic Comics" class="demo">Demo</a>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__frenetic-comics1">Aa</span>
                                 <span class="tipografia__frenetic-comics2">Rajdhani</span>
@@ -366,7 +382,7 @@
                                 Responsive para cualquier dispositivo. Está hecha con HTML5, CSS3 y JavaScript puro.</p>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__frenetic-comics1">#000000</div>
                                 <div class="colores colores__frenetic-comics2">#FFFFFF</div>
@@ -386,7 +402,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
                             <div class="galeria" data-gallery="3">
                                 <img src="./img/freneticcomics1.webp" alt="Frenetic Comics Gallery 1"
                                     class="galeria__img" data-index="0">
@@ -402,17 +418,18 @@
                     <div class="project project__bbracing-iframe">
                         <div class="project__title">
                             <h2>B&B Racing Parts iframe</h2>
-                            <h4>Maquetado para descripción de productos de Ebay</h4>
+                            <h3>Maquetado para descripción de productos de Ebay</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/bbracing-ebay" target="_blank"><img
-                                    src="./img/github-sourcecode.svg" alt="Source Code" class="sourcecode">Source
+                                    src="./img/github-sourcecode.svg" alt="Source Code B&B Racing Parts iframe"
+                                    class="sourcecode">Source
                                 Code</a>
                             <a href="https://bbracing-ebay-desc-demo.netlify.app/" target="_blank"><img
-                                    src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
+                                    src="./img/demo.svg" alt="Demo B&B Racing Parts iframe" class="demo">Demo</a>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__bbracing-webapp1">Aa</span>
                                 <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
@@ -429,7 +446,7 @@
                             </p>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__bbracing-webapp1">#171717</div>
                                 <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
@@ -444,7 +461,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
                             <div class="galeria" data-gallery="5">
                                 <img src="./img/bbracingiframe1.webp" alt="BBRacing Iframe Gallery 1"
                                     class="galeria__img" data-index="0">
@@ -458,7 +475,7 @@
                     <!-- <div class="project project__sodastereo-fanpage">
                         <div class="project__title">
                             <h2>Soda Stereo Fanpage</h2>
-                            <h4>Maquetado Onepage - Mobile First y Responsive</h4>
+                            <h3>Maquetado Onepage - Mobile First y Responsive</h3>
 
                         </div>
                         <div class="project__buttons">
@@ -469,7 +486,7 @@
                                     src="./img/demo.svg" alt="Demo" class="demo">Demo</a>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__bbracing-webapp1">Aa</span>
                                 <span class="tipografia__bbracing-webapp2">Plus Jakarta Sans</span>
@@ -483,7 +500,7 @@
                             </p>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__bbracing-webapp1">#171717</div>
                                 <div class="colores colores__bbracing-webapp2">#2D2D2D</div>
@@ -497,7 +514,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
                             <div class="galeria" data-gallery="4">
                                 <img src="./img/rectanglep.webp" alt="Soda Stereo Gallery 1" class="galeria__img"
                                     data-index="0">
@@ -514,10 +531,10 @@
                     <div class="project project__kz-group">
                         <div class="project__title">
                             <h2>KZ Group</h2>
-                            <h4>Propuesta de rediseño de One Page Web - Mobile First</h4>
+                            <h3>Propuesta de rediseño de One Page Web - Mobile First</h3>
                         </div>
                         <div class="project__typography">
-                            <h3>Tipografía</h3>
+                            <h4>Tipografía</h4>
                             <div class="tipografia">
                                 <span class="tipografia__kz-group1">Aa</span>
                                 <span class="tipografia__kz-group2">Montserrat</span>
@@ -530,7 +547,7 @@
                             </p>
                         </div>
                         <div class="project__color">
-                            <h3>Colores</h3>
+                            <h4>Colores</h4>
                             <div class="project__color__seccion">
                                 <div class="colores colores__kz-group1">#EDEDED</div>
                                 <div class="colores colores__kz-group2">#0B0B0B</div>
@@ -552,7 +569,7 @@
                                 class="project__img__portrait">
                         </div>
                         <div class="project__gallery">
-                            <h3>Galería</h3>
+                            <h4>Galería</h4>
                             <div class="galeria" data-gallery="6">
                                 <img src="./img/kz-group1.webp" alt="KZ Group Gallery 1" class="galeria__img"
                                     data-index="0">
@@ -583,36 +600,48 @@
             </ul>
             <div class="contenido contenido__contact">
                 <div class="contacto">
-                    <form class="contacto__form" id="contacto-form">
-                        <img src="./img/work-in-progress.webp" alt="Work in Progress" class="contacto__form__work">
-                        <h2>Escribime</h2>
-                        <input type="text" name="nombre" id="nombre" placeholder="Nombre">
-                        <input type="email" name="email" id="email" placeholder="Email">
-                        <textarea name="mensaje" id="mensaje" placeholder="Mensaje"></textarea>
-                        <input type="submit" value="Enviar" id="submit">
-                    </form>
-                    <div class="contacto__redes">
-                        <a href="tel:+541160518730" target="_blank">
-                            <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd" clip-rule="evenodd"
-                                    d="M44 3H3V44H44V3ZM25.5671 32.6908C20.7325 30.2137 16.7692 26.2675 14.3092 21.4329L18.0675 17.6746C18.5458 17.1963 18.6825 16.53 18.4946 15.9321C17.8465 13.9642 17.5178 11.9052 17.5208 9.83333C17.5208 8.89375 16.7521 8.125 15.8125 8.125H9.83333C8.89375 8.125 8.125 8.89375 8.125 9.83333C8.125 25.8746 21.1254 38.875 37.1667 38.875C38.1063 38.875 38.875 38.1063 38.875 37.1667V31.2046C38.875 30.265 38.1063 29.4963 37.1667 29.4963C35.0483 29.4963 32.9813 29.1546 31.0679 28.5225C30.47 28.3175 29.7867 28.4713 29.3254 28.9325L25.5671 32.6908Z" />
-                                <rect y="40" width="46" height="6" />
-                                <rect width="46" height="6" />
-                                <rect y="46" width="46" height="6" transform="rotate(-90 0 46)" />
-                                <rect x="40" y="46" width="46" height="6" transform="rotate(-90 40 46)" />
-                            </svg>
-
-                        </a>
-                        <a href="mailto:damiparrilli@gmail.com" target="_blank">
-                            <svg viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="46" height="46" />
+                    <div class="contacto__items">
+                        <div class="contacto__items__individual">
+                            <svg viewBox="0 0 34 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
-                                    d="M39 10H8V35H39V10ZM35.9 16.25L23.5 24.0625L11.1 16.25V13.125L23.5 20.9375L35.9 13.125V16.25Z"
-                                    fill="#161616" />
+                                    d="M33.96 0H0.47998V27H33.96V0ZM30.612 6.75L17.22 15.1875L3.82798 6.75V3.375L17.22 11.8125L30.612 3.375V6.75Z"
+                                    fill="#F9F9F9" />
                             </svg>
+                            <h2>Email</h2>
+                            <p>damiparrilli@gmail.com</p>
+                        </div>
+                        <div class="contacto__items__individual">
+                            <svg viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M31 21.4608L21.9231 20.4101L17.5827 24.7505C12.6936 22.2633 8.71951 18.2892 6.23229 13.4001L10.5899 9.04245L9.53925 0H0.0489802C-0.949995 17.5337 13.4663 31.95 31 30.951V21.4608Z"
+                                    fill="#F9F9F9" />
+                            </svg>
+                            <h2>Teléfono</h2>
+                            <p>+54 1160518730</p>
+                        </div>
+                        <div class="contacto__items__individual">
 
-                        </a>
-                        <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank">
+                            <svg viewBox="0 0 26 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M18.4468 0H0V31H26V7.74043H18.4468V0ZM7.66809 7.81276C7.13096 7.81276 6.67114 7.62151 6.28864 7.23901C5.90614 6.85651 5.71489 6.39669 5.71489 5.85956C5.71489 5.32244 5.90614 4.86262 6.28864 4.48012C6.67114 4.09762 7.13096 3.90637 7.66809 3.90637C8.20521 3.90637 8.66503 4.09762 9.04753 4.48012C9.43003 4.86262 9.62128 5.32244 9.62128 5.85956C9.62128 6.39669 9.43003 6.85651 9.04753 7.23901C8.66503 7.62151 8.20521 7.81276 7.66809 7.81276ZM3.7617 11.7191V10.3519C3.7617 10.0752 3.83299 9.82096 3.97558 9.58918C4.11816 9.3574 4.30729 9.18032 4.54298 9.05791C5.04755 8.80563 5.56027 8.61649 6.08112 8.49051C6.60197 8.36453 7.13096 8.30138 7.66809 8.30105C8.20521 8.30073 8.7342 8.36388 9.25505 8.49051C9.7759 8.61714 10.2886 8.80628 10.7932 9.05791C11.0292 9.17999 11.2185 9.35708 11.3611 9.58918C11.5037 9.82129 11.5748 10.0755 11.5745 10.3519V11.7191H3.7617ZM22.0638 14.9021H3.7617V16.4213H22.0638V14.9021ZM3.7617 19.2426H20.9064V20.7617H3.7617V19.2426ZM19.0979 23.583H3.7617V25.1021H19.0979V23.583Z"
+                                    fill="#F9F9F9" />
+                                <path d="M20.5447 0L26 5.71489H20.5447L20.5447 0Z" fill="#F9F9F9" />
+                            </svg>
+                            <h2>Mi CV</h2>
+                            <a href="https://drive.google.com/file/d/1A5Wpw9mBDjPdLU9VPdSDbtLBzCXVrfbk/view?usp=sharing"
+                                target="_blank">Abrir CV
+                                <svg viewBox="0 0 428 428" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M73 1.02187C38.7 6.02187 11.4 30.6219 2.3 64.9219L0 73.4219V213.922V354.422L2.3 362.922C10.6 394.222 33.2 416.822 64.5 425.122L73 427.422H213.5H354L362.5 425.122C393.6 416.922 416 394.622 424.7 363.422C426.9 355.622 426.9 353.822 427.3 294.422C427.6 228.422 427.6 227.922 422.3 221.522C414.1 211.522 398.3 211.122 389.3 220.622C383.9 226.322 384 224.922 383.5 290.422C383 350.722 383 351.522 380.8 356.922C375.9 368.922 365.7 378.322 353.5 382.022C347.1 383.922 344 383.922 211.5 383.722L76 383.422L70.5 381.222C58.5 376.322 49.2 366.222 45.5 354.122C43.5 347.822 43.5 344.422 43.5 213.922C43.5 83.4219 43.5 80.0219 45.5 73.7219C49.2 61.6219 58.5 51.5219 70.5 46.6219C75.9 44.4219 76.7 44.4219 137 43.9219C179.9 43.5219 198.8 43.1219 200.6 42.2219C202 41.6219 204.6 39.9219 206.4 38.4219C215.9 30.4219 216.1 14.5219 206.8 5.72187C200.7 -0.0781314 200.6 -0.0781314 137.1 0.0218686C105.2 0.121869 76.3 0.521869 73 1.02187Z" />
+                                    <path
+                                        d="M271.3 0.921938C266.1 2.52194 261.5 6.12194 258.7 10.7219C256.5 14.5219 256 16.6219 256 21.9219C256 30.4219 259.4 36.6219 266.3 40.6219L271 43.4219L311.4 43.7219L351.9 44.0219L273.8 122.222C230.8 165.222 194.9 202.022 193.9 203.922C191.5 208.422 191.4 219.222 193.7 223.422C195.8 227.322 200.1 231.622 204 233.722C208.2 236.022 219 235.922 223.5 233.522C225.4 232.522 262.2 196.622 305.2 153.622L383.4 75.5219L383.7 116.022L384 156.422L386.8 161.122C390.8 168.022 397 171.422 405.5 171.422C412.6 171.322 416.3 169.922 420.9 165.322C427.4 158.822 427 163.522 427 85.9219V15.4219L424.2 10.7219C422.4 7.62194 419.8 5.02194 416.7 3.22194L412 0.421938L343 0.221938C305.1 0.121938 272.8 0.421938 271.3 0.921938Z" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contacto__redes">
+                        <a href="https://www.linkedin.com/in/damianparrilli/" target="_blank" aria-label="Ir a mi LinkedIn">
                             <svg class="contacto__redes__linkedin" viewBox="0 0 83 83" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -620,7 +649,7 @@
                             </svg>
 
                         </a>
-                        <a href="https://github.com/damianparrilli" target="_blank"><svg class="contacto__redes__github"
+                        <a href="https://github.com/damianparrilli" target="_blank" aria-label="Ir a mi GitHub"><svg class="contacto__redes__github"
                                 viewBox="0 0 83 83" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <rect x="0.00012207" y="78.0005" width="82.1533" height="4.1528" />
                                 <rect y="6.10352e-05" width="82.1533" height="14.0834" />
