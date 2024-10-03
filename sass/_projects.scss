@@ -95,6 +95,11 @@
                 height: 2em;
             }
 
+            .figma-draft {
+                width: 1.5em;
+                height: 1.5em;
+                margin-right: 5px;
+            }
             &:hover{
                 background-color: manager.$hover-main-color;
             }
@@ -122,6 +127,13 @@
             @media (max-width: 600px) {
                 width: max-content;
                 padding: 0 15px;
+                
+            }
+        }
+
+        & .figma-button{
+            @media (max-width: 600px) {
+                padding: 0 25px;
                 
             }
         }

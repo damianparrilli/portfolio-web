@@ -64,15 +64,17 @@ const observerFade = new IntersectionObserver((entries) => {
   if (observerActive) { 
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        
+        sections.forEach(section => {
+          section.classList.add('fade-out');
+          section.classList.remove('fade');
+        });
         entry.target.classList.add('fade');
         entry.target.classList.remove('fade-out');
+        
         if (entry.target.id === 'banner') {
           animation.play();
         }
       } else {
-        entry.target.classList.add('fade-out');
-        entry.target.classList.remove('fade');
         if (entry.target.id === 'banner') {
           animation.stop();
         }
