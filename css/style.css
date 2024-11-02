@@ -9,6 +9,7 @@
 
 html {
   scroll-behavior: smooth;
+  text-wrap: pretty;
 }
 @media (max-height: 800px) and (min-height: 700px) and (min-width: 600px) {
   html {
@@ -1127,6 +1128,15 @@ h1 {
   gap: 20px;
   grid-area: typography;
 }
+.project__typography__bonte {
+  display: flex;
+  gap: 15px;
+}
+@media (min-width: 900px) {
+  .project__typography__bonte {
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px) {
   .project__typography {
     margin-top: -25px;
@@ -1207,6 +1217,9 @@ h1 {
     display: none;
   }
 }
+.project__bontedeco::before {
+  background: linear-gradient(to right, #493E30, #7a806c);
+}
 .project__bbracing-webapp::before {
   background: linear-gradient(to right, #181818, #474747);
 }
@@ -1253,6 +1266,9 @@ h1 {
     align-content: flex-start;
     font-size: clamp(0.75rem, 0.464rem + 1.429vw, 1rem);
   }
+  .project__bontedeco {
+    background: linear-gradient(to right, #493E30, #7a806c);
+  }
   .project__bbracing-webapp {
     background: linear-gradient(to right, #181818, #474747);
   }
@@ -1284,6 +1300,36 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   line-height: 1;
+}
+.tipografia__bonte1 {
+  font-size: 4em;
+  font-weight: 700;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.tipografia__bonte2 {
+  font-weight: 700;
+  font-size: 1em;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+.tipografia__bonte3 {
+  font-size: 3.4em;
+  font-weight: 700;
+  font-family: "Italiana", sans-serif;
+}
+@media (max-width: 900px) {
+  .tipografia__bonte3 {
+    font-size: 4em;
+  }
+}
+.tipografia__bonte4 {
+  font-weight: 700;
+  font-size: 1.2em;
+  font-family: "Italiana", sans-serif;
+}
+@media (max-width: 900px) {
+  .tipografia__bonte4 {
+    font-size: 1em;
+  }
 }
 .tipografia__bbracing-webapp1 {
   margin-top: 30px;
@@ -1354,6 +1400,24 @@ h1 {
   width: 5em;
   height: 5em;
   border: 0.3px solid #F9F9F9;
+}
+.colores__bonte1::before {
+  background-color: #F9F9F9;
+}
+.colores__bonte2::before {
+  background-color: #3C2C0B;
+}
+.colores__bonte3::before {
+  background-color: #547498;
+}
+.colores__bonte4::before {
+  background-color: #f1eee8;
+}
+.colores__bonte5::before {
+  background-color: #D9DAD3;
+}
+.colores__bonte6::before {
+  background-color: #C5CAB7;
 }
 .colores__bbracing-webapp1::before {
   background-color: #171717;

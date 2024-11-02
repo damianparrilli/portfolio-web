@@ -164,6 +164,15 @@
         gap: 20px;
         grid-area: typography;
 
+        &__bonte {
+            display: flex;
+            gap: 15px;
+            @media (min-width: 900px) {
+                flex-direction: column;
+            }
+           
+        }
+
         @media (max-width: 600px) {
             margin-top: -25px;
 
@@ -253,6 +262,10 @@
         @include fondo-projects();
     }
 
+    &__bontedeco::before {
+        background: linear-gradient(to right, #493E30, #7a806c);
+    }
+
     &__bbracing-webapp::before {
         background: linear-gradient(to right, #181818, #474747);
 
@@ -324,6 +337,10 @@
         align-content: flex-start;
         font-size: clamp(0.75rem, 0.464rem + 1.429vw, 1rem);
 
+        &__bontedeco {
+            background: linear-gradient(to right, #493E30, #7a806c);
+        }
+
         &__bbracing-webapp {
             background: linear-gradient(to right, #181818, #474747);
 
@@ -366,6 +383,39 @@
 .tipografia {
     @include manager.flex-center(column, center, flex-start);
     line-height: 1;
+
+    &__bonte1 {
+        font-size: 4em;
+        font-weight: 700;
+
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    &__bonte2 {
+        font-weight: 700;
+        font-size: 1em;
+        font-family: "Plus Jakarta Sans", sans-serif;
+    }
+
+    &__bonte3 {
+        font-size: 3.4em;
+        font-weight: 700;
+
+        font-family: "Italiana", sans-serif;
+        @media (max-width: 900px) {
+            font-size: 4em;
+            }
+    }
+
+    &__bonte4 {
+        font-weight: 700;
+        font-size: 1.2em;
+        font-family: "Italiana", sans-serif;
+
+        @media (max-width: 900px) {
+        font-size: 1em;
+        }
+    }
 
     &__bbracing-webapp1 {
         margin-top: 30px;
@@ -449,6 +499,30 @@
         border: 0.3px solid #F9F9F9;
 
 
+    }
+
+    &__bonte1::before {
+        background-color: #F9F9F9;
+    }
+
+    &__bonte2::before {
+        background-color: #3C2C0B;
+    }
+
+    &__bonte3::before {
+        background-color: #547498;
+    }
+
+    &__bonte4::before {
+        background-color: #f1eee8;
+    }
+
+    &__bonte5::before {
+        background-color: #D9DAD3;
+    }
+
+    &__bonte6::before {
+        background-color: #C5CAB7;
     }
 
     &__bbracing-webapp1::before {
