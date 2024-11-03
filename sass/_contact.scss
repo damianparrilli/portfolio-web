@@ -6,7 +6,6 @@
     gap: 50px;
     overflow-x: hidden;
     position: relative;
-    max-height: max-content;
 
     &__items {
         @include manager.flex-center(row, space-between, center);

@@ -102,8 +102,8 @@
                         <div class="face back" id="back">
                             <div class="back__texto">
                                 <p class="back__texto__text"><b>Email:</b> damiparrilli@gmail.com</p>
-                                <p class="back__texto__text"><b>Teléfono:</b> +54 1160518730</p>
-                                <a href="https://drive.google.com/file/d/1A5Wpw9mBDjPdLU9VPdSDbtLBzCXVrfbk/view?usp=sharing"
+                                <p class="back__texto__text" id="telefono-back"><b>Teléfono:</b> +54 1160518730</p>
+                                <a href="https://drive.google.com/file/d/1zmaLM61esZ7PXP0E0kmiO99Xc3q8hsTI/view?usp=sharing"
                                     target="_blank" class="back__texto__button">Mi CV</a>
                             </div>
                             <img src="./img/dp-logo.svg" alt="Damián Parrilli" class="back__img" loading="lazy">
@@ -129,12 +129,12 @@
             <div class="contenido">
                 <div class="contenido__skills">
                     <div class="formacion">
-                        <h2>Formación</h2>
+                        <h2 id="formacion">Formación</h2>
                         <a href="https://drive.google.com/file/d/1go7FVlLRiP2DpFFjB2de7JFpod_aYlTn/view?usp=sharing"
                             class="formacion__individual" target="_blank">
                             <img src="./img/unlp.webp" alt="UNLP" class="formacion__individual__img" loading="lazy">
                             <div class="formacion__individual__desc">
-                                <h3>Licenciatura en Diseño Multimedial</h3>
+                                <h3 id="licenciatura">Licenciatura en Diseño Multimedial</h3>
                                 <p>Facultad de Artes - UNLP</p>
                                 <p>2018 - feb. 2024</p>
                             </div>
@@ -144,7 +144,7 @@
                             <img src="./img/codo-a-codo.webp" alt="Codo a Codo 4.0" class="formacion__individual__img"
                                 loading="lazy">
                             <div class="formacion__individual__desc">
-                                <h3>Curso Full-Stack NodeJS</h3>
+                                <h3 id="cursoFullStack">Curso Full-Stack NodeJS</h3>
                                 <p>Codo a Codo 4.0 - Gobierno de Buenos Aires</p>
                                 <p>2024</p>
                             </div>
@@ -187,7 +187,7 @@
                     </div>
                     <div class="herramientas">
                         <div class="herramientas__section">
-                            <h2>Herramientas</h2>
+                            <h2 id="tools">Herramientas</h2>
                             <ul class="herramientas__lista">
                                 <li><img src="./img/vsc.svg" alt="" class="herramientas__lista__img"
                                         loading="lazy">Visual Studio Code
@@ -210,14 +210,14 @@
                                         loading="lazy">Adobe After Effects
                                     CC
                                 </li>
-                                <li><img src="./img/office.svg" alt="" class="herramientas__lista__img"
+                                <li id="office-package"><img src="./img/office.svg" alt="" class="herramientas__lista__img"
                                         loading="lazy">Paquete
                                     Microsoft
                                     Office</li>
                             </ul>
                         </div>
                         <div class="herramientas__habilidades">
-                            <h2>Conocimientos técnicos</h2>
+                            <h2 id="conocimientos-tecnicos">Conocimientos técnicos</h2>
                             <ul class="herramientas__habilidades__lista">
                                 <li><img src="./img/html5.svg" alt="" class="herramientas__habilidades__lista__img"
                                         loading="lazy">HTML5</li>
@@ -231,7 +231,7 @@
                                 <li><img src="./img/sass.svg" alt="" class="herramientas__habilidades__lista__img"
                                         loading="lazy">SASS
                                 </li>
-                                <li><img src="./img/ux-ui.svg" alt="" class="herramientas__habilidades__lista__img"
+                                <li id="diseño-uxui"><img src="./img/ux-ui.svg" alt="" class="herramientas__habilidades__lista__img"
                                         loading="lazy">Diseño UX/UI</li>
                                 <li><img src="./img/nodejs.svg" alt="" class="herramientas__habilidades__lista__img"
                                         loading="lazy">Node.JS</li>
@@ -267,7 +267,7 @@
                     <div class="project project__bontedeco">
                         <div class="project__title">
                             <h2>Bonté Deco</h2>
-                            <h3>Diseño y maquetado web - Responsive y Mobile First</h3>
+                            <h3 id="bonteh3">Diseño y maquetado web - Responsive y Mobile First</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/bonte-deco-landingpage" target="_blank"><img
@@ -277,8 +277,8 @@
                             <a href="https://bontedeco.netlify.app" target="_blank"><img src="./img/demo.svg"
                                     alt="Demo Bonté Deco" class="demo" loading="lazy">Demo</a>
                         </div>
-                        <div class="project__typography">
-                            <h4>Tipografías</h4>
+                        <div class="project__typographies">
+                            <h4 id="tipografias">Tipografías</h4>
                             <div class="project__typography__bonte">
                                 <div class="tipografia">
                                     <span class="tipografia__bonte1">Aa</span>
@@ -291,7 +291,7 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Una landing page para Bonté, una empresa de decoración de interiores. Muestra sus
+                            <p id="bonte-description">Una landing page para Bonté, una empresa de decoración de interiores. Muestra sus
                                 principales productos, su catálogo con variedad de productos, una sección de preguntas
                                 frecuentes y un contacto funcional con Netlify Forms. Esta página fue hecha con Astro,
                                 TailwindCSS, JavaScript/TypeScript, y las librerías Preline UI y TAOS (Tailwind Animate
@@ -333,7 +333,7 @@
                     <div class="project project__bbracing-webapp">
                         <div class="project__title">
                             <h2>B&B Racing Parts WebApp</h2>
-                            <h3>Diseño Web Desktop</h3>
+                            <h3 id="webapph3">Diseño Web Desktop</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://www.figma.com/design/x89IYoU15IW4Z6lXr1eI9f/BBRacing-Parts-WebApp-Project?m=auto&t=gRX1geV3h2ihXbBG-1"
@@ -348,7 +348,7 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Diseño de interfaz hecho para la empresa B&B Racing Parts, con la necesidad de generar
+                            <p id="webapp-description">Diseño de interfaz hecho para la empresa B&B Racing Parts, con la necesidad de generar
                                 una plataforma funcional y con buena usabilidad.
                                 <br>Se incluye diseño de Login, plataforma principal One Page y el sistema de filtros.
                             </p>
@@ -392,7 +392,7 @@
                     <div class="project project__boxedcat">
                         <div class="project__title">
                             <h2>BoxedCat</h2>
-                            <h3>Maquetado Web Desktop Responsive</h3>
+                            <h3 id="boxedcath3">Maquetado Web Desktop Responsive</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/boxedcat" target="_blank"><img
@@ -403,7 +403,7 @@
                                     alt="Demo BoxedCat" class="demo" loading="lazy">Demo</a>
                         </div>
                         <div class="project__description">
-                            <p>Una simulación de una nota, en este caso de una entrevista, en donde hay elementos
+                            <p id="boxedcat-description">Una simulación de una nota, en este caso de una entrevista, en donde hay elementos
                                 interactivos como el poder guardar una nota, poder valorar la nota y comentar en ella.
                                 Este maquetado incluye un registro y login funcional con localStorage. Está hecha con
                                 HTML5, CSS3 y JavaScript puro.</p>
@@ -448,7 +448,7 @@
                     <div class="project project__frenetic-comics">
                         <div class="project__title">
                             <h2>Frenetic Comics</h2>
-                            <h3>Diseño y maquetado de Landing Page - Mobile First y Responsive</h3>
+                            <h3 id="frenetic-comicsh3">Diseño y maquetado de Landing Page - Mobile First y Responsive</h3>
 
                         </div>
                         <div class="project__buttons">
@@ -467,7 +467,7 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Una landing page hecha en 2020, readaptada en 2024 para una mejor legibilidad y
+                            <p id="frenetic-comics-description">Una landing page hecha en 2020, readaptada en 2024 para una mejor legibilidad y
                                 usabilidad. Basado en un diseño de ese mismo año hecho por mi. Es Mobile First y
                                 Responsive para cualquier dispositivo. Está hecha con HTML5, CSS3 y JavaScript puro.</p>
                         </div>
@@ -508,7 +508,7 @@
                     <div class="project project__bbracing-iframe">
                         <div class="project__title">
                             <h2>B&B Racing Parts iframe</h2>
-                            <h3>Maquetado para descripción de productos de Ebay</h3>
+                            <h3 id="bbracing-iframeh3">Maquetado para descripción de productos de Ebay</h3>
                         </div>
                         <div class="project__buttons">
                             <a href="https://github.com/damianparrilli/bbracing-ebay" target="_blank"><img
@@ -527,7 +527,7 @@
                             </div>
                         </div>
                         <div class="project__description">
-                            <p>Un iframe para la descripción de productos de Ebay, para la empresa B&B Racing Parts. Es
+                            <p id="bbracing-iframe-description">Un iframe para la descripción de productos de Ebay, para la empresa B&B Racing Parts. Es
                                 Mobile First y Responsive, y esta hecha solo con HTML y CSS incluido en el Style debido
                                 a que Ebay no permite uso de programación. La Demo muestra cómo se vería en el
                                 dispositivo que
@@ -712,7 +712,7 @@
                                     d="M31 21.4608L21.9231 20.4101L17.5827 24.7505C12.6936 22.2633 8.71951 18.2892 6.23229 13.4001L10.5899 9.04245L9.53925 0H0.0489802C-0.949995 17.5337 13.4663 31.95 31 30.951V21.4608Z"
                                     fill="#F9F9F9" />
                             </svg>
-                            <h2>Teléfono</h2>
+                            <h2 id="contacto-telefono">Teléfono</h2>
                             <p>+54 1160518730</p>
                         </div>
                         <div class="contacto__items__individual">
@@ -723,9 +723,9 @@
                                     fill="#F9F9F9" />
                                 <path d="M20.5447 0L26 5.71489H20.5447L20.5447 0Z" fill="#F9F9F9" />
                             </svg>
-                            <h2>Mi CV</h2>
-                            <a href="https://drive.google.com/file/d/1A5Wpw9mBDjPdLU9VPdSDbtLBzCXVrfbk/view?usp=sharing"
-                                target="_blank">Abrir CV
+                            <h2 id="contacto-cv">Mi CV</h2>
+                            <a href="https://drive.google.com/file/d/1zmaLM61esZ7PXP0E0kmiO99Xc3q8hsTI/view?usp=sharing"
+                                target="_blank" id="contacto-cv-link">Abrir CV
                                 <svg viewBox="0 0 428 428" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
                                         d="M73 1.02187C38.7 6.02187 11.4 30.6219 2.3 64.9219L0 73.4219V213.922V354.422L2.3 362.922C10.6 394.222 33.2 416.822 64.5 425.122L73 427.422H213.5H354L362.5 425.122C393.6 416.922 416 394.622 424.7 363.422C426.9 355.622 426.9 353.822 427.3 294.422C427.6 228.422 427.6 227.922 422.3 221.522C414.1 211.522 398.3 211.122 389.3 220.622C383.9 226.322 384 224.922 383.5 290.422C383 350.722 383 351.522 380.8 356.922C375.9 368.922 365.7 378.322 353.5 382.022C347.1 383.922 344 383.922 211.5 383.722L76 383.422L70.5 381.222C58.5 376.322 49.2 366.222 45.5 354.122C43.5 347.822 43.5 344.422 43.5 213.922C43.5 83.4219 43.5 80.0219 45.5 73.7219C49.2 61.6219 58.5 51.5219 70.5 46.6219C75.9 44.4219 76.7 44.4219 137 43.9219C179.9 43.5219 198.8 43.1219 200.6 42.2219C202 41.6219 204.6 39.9219 206.4 38.4219C215.9 30.4219 216.1 14.5219 206.8 5.72187C200.7 -0.0781314 200.6 -0.0781314 137.1 0.0218686C105.2 0.121869 76.3 0.521869 73 1.02187Z" />

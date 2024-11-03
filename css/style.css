@@ -736,6 +736,8 @@ h1 {
   }
 }
 .formacion__individual__desc {
+  max-width: 350px;
+  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -1139,6 +1141,24 @@ h1 {
 }
 @media (max-width: 600px) {
   .project__typography {
+    margin-top: -25px;
+  }
+}
+.project__typographies {
+  gap: 20px;
+  grid-area: typography;
+}
+.project__typographies__bonte {
+  display: flex;
+  gap: 15px;
+}
+@media (min-width: 900px) {
+  .project__typographies__bonte {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .project__typographies {
     margin-top: -25px;
   }
 }
@@ -1621,7 +1641,6 @@ h1 {
   gap: 50px;
   overflow-x: hidden;
   position: relative;
-  max-height: max-content;
 }
 .contacto__items {
   display: flex;

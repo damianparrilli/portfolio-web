@@ -179,6 +179,25 @@
         }
     }
 
+    &__typographies {
+        gap: 20px;
+        grid-area: typography;
+
+        &__bonte {
+            display: flex;
+            gap: 15px;
+            @media (min-width: 900px) {
+                flex-direction: column;
+            }
+           
+        }
+
+        @media (max-width: 600px) {
+            margin-top: -25px;
+
+        }
+    }
+
     &__color {
         grid-area: colores;
         gap: 15px;

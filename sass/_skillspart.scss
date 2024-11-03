@@ -25,6 +25,8 @@
         }
 
         &__desc {
+            max-width: 350px;
+            width: 100%;
             @include manager.flex-center(column, center, flex-start);
             gap: 5px;
         }
