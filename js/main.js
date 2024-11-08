@@ -335,6 +335,11 @@ if (!userLanguage.startsWith('es')) {
                                 <li>I have done the interface design of a OnePage WebApp, including Login and Filter System. The design was made with Figma. (April 2024) </li>
                                 <li>I developed an iframe with HTML for the interactive description of Ebay products. (May 2024)</li>
                             </ul>
+                            <p>Bonté Deco</p>
+                            <ul>
+                                <li>I designed the whole website with Figma. (Sept. 2024)</li>
+                                <li>developed the website with Astro, TailwindCSS and TypeScript/JS. (Oct. - Current)</li>
+                            </ul>
                         </div>
                         `
   const tools = document.getElementById('tools');
