@@ -12,6 +12,10 @@
         color: manager.$secondary-color;
         text-decoration: none;
         
+        @media (min-width: 2100px) {
+            max-height: 300px;
+            height: 100%
+        }
         &__img {
             width: 100%;
             max-width: 4.6em;
@@ -29,6 +33,10 @@
             width: 100%;
             @include manager.flex-center(column, center, flex-start);
             gap: 5px;
+
+            @media (min-width: 2100px) {
+                max-width: 70%;
+            }
         }
 
         @media (min-width: 900px) {
@@ -45,6 +53,9 @@
         @include manager.flex-center(column, center, flex-start);
             gap: 15px;
             margin-top: 15px;
+            @media (min-width: 2100px) {
+                margin-top: 50px;
+            }
         &__individuales{
             @include manager.flex-center(column, center, flex-start);
             gap: 5px;
@@ -69,6 +80,9 @@
                 }
             }
         }
+        @media (min-width: 2100px) {
+            gap: 10px;
+        }
     }
 }
 
@@ -91,6 +105,9 @@
         @include manager.flex-center(column, center, flex-start);
         gap: 15px;
         width: 100%;
+        @media (min-width: 2100px) {
+            gap: 30px;
+        }
     }
     &__lista {
         @include listas-habilidades();
@@ -123,7 +140,9 @@
             object-fit: contain;
         }
 
-        
+        @media (min-width: 2100px) {
+            gap: 50px 20px;
+        }
     }
 
     &__habilidades{
@@ -165,6 +184,13 @@
             height: auto;
             object-fit: contain;
                 }
+
+                @media (min-width: 2100px) {
+                    gap: 50px 20px;
+                }
+            }
+            @media (min-width: 2100px) {
+                gap: 30px;
             }
     }
 }

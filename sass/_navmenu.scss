@@ -2,6 +2,7 @@
 
 $mobile: 45px;
 $desktop-tablet: 80px;
+$desktop-4k: 120px;
 
 
 .nav-menu {
@@ -19,6 +20,10 @@ $desktop-tablet: 80px;
 
     @media (max-width: 900px) {
         border: $mobile solid manager.$main-color;
+    }
+
+    @media (min-width: 2100px) {
+        border: $desktop-4k solid manager.$main-color;
     }
 
     &::before {
@@ -41,9 +46,20 @@ $desktop-tablet: 80px;
 
         }
 
+        @media (min-width: 2100px) {
+            content: "";
+            position: absolute;
+            border: 1px solid manager.$secondary-color;
+            width: calc(100% + 120px);
+            height: calc(100% + 120px);
+            top: -60px;
+            left: -60px;
+
+        }
+
     }
 
-    
+
 
 
     &__buttons {
@@ -63,31 +79,40 @@ $desktop-tablet: 80px;
             gap: 15px;
         }
 
-        
+
 
         a {
             padding: 0 25px;
             color: inherit;
             background-color: manager.$main-color;
             text-decoration: none;
+
             @media (min-width: 900px) {
                 &:hover {
                     color: manager.$hover-nav-color;
                 }
             }
-            
+
 
             @media (max-width: 600px) {
                 padding: 0 15px;
             }
+
+            @media (min-width: 2100px) {
+                padding: 0 60px;
+            }
         }
 
-       
+        @media (min-width: 2100px) {
+            bottom: -87.5px;
+            gap: 80px;
+            font-size: 1.4em;
+        }
 
     }
 
-    #banner &__buttons{
-        
+    #banner &__buttons {
+
         @media (max-width: 570px) {
             position: fixed;
             bottom: auto;
@@ -102,21 +127,22 @@ $desktop-tablet: 80px;
             pointer-events: none;
             transition: .5s ease-in-out;
             font-size: 1.3em;
-            &.active{
+
+            &.active {
                 opacity: 1;
-            pointer-events: all;
+                pointer-events: all;
             }
         }
 
-       
-        
+
+
     }
 
-    &.lazy{
+    &.lazy {
         display: none;
     }
 
-    
+
     &__title {
         font-size: 1.2em;
         position: absolute;
@@ -128,6 +154,12 @@ $desktop-tablet: 80px;
         @media (max-width: 900px) {
             top: -32px;
         }
+
+        @media (min-width: 2100px) {
+            top: -93px;
+            font-size: 1.4em;
+            padding: 0 60px;
+        }
     }
 
     &__contact {
@@ -135,6 +167,10 @@ $desktop-tablet: 80px;
 
         @media (max-width: 900px) {
             border: $mobile solid manager.$secondary-color;
+        }
+
+        @media (min-width: 2100px) {
+            border: $desktop-4k solid manager.$secondary-color;
         }
 
         &::before {
@@ -145,10 +181,21 @@ $desktop-tablet: 80px;
                 position: absolute;
                 width: calc(100% + 40px);
                 height: calc(100% + 40px);
-                
+
                 top: -20px;
                 left: -20px;
                 border: 1px solid manager.$main-color;
+
+            }
+
+            @media (min-width: 2100px) {
+                content: "";
+            position: absolute;
+            border: 1px solid manager.$main-color;
+                width: calc(100% + 120px);
+            height: calc(100% + 120px);
+            top: -60px;
+            left: -60px;
     
             }
 
@@ -184,8 +231,16 @@ $desktop-tablet: 80px;
         width: 24px;
         height: auto;
         cursor: pointer;
+
         @media (max-width: 900px) {
             right: -35px;
+            top: calc(50% - 60px);
+        }
+
+        @media (min-width: 2100px) {
+            right: -90px;
+            padding: 50px 0;
+            width: 1.5em;
             top: calc(50% - 60px);
         }
     }
@@ -201,15 +256,23 @@ $desktop-tablet: 80px;
         height: auto;
         transform: rotate(180deg);
         cursor: pointer;
+
         @media (max-width: 900px) {
             left: -35px;
+            top: calc(50% - 60px);
+        }
+
+        @media (min-width: 2100px) {
+            left: -90px;
+            padding: 50px 0;
+            width: 1.5em;
             top: calc(50% - 60px);
         }
     }
 
 }
 
-#popup-open{
+#popup-open {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -219,13 +282,15 @@ $desktop-tablet: 80px;
     border-radius: 50%;
     @include manager.flex-center(row, center, center);
     border: .1px solid #1313131a;
-    & svg{
+
+    & svg {
         width: 2em;
     }
+
     z-index: 1;
 }
 
-#popup-close{
+#popup-close {
     position: absolute;
     top: 15%;
     right: 15%;
@@ -235,8 +300,10 @@ $desktop-tablet: 80px;
     z-index: 1;
 }
 
-@media (min-width: 570px){
-    #popup-close, #popup-open{
+@media (min-width: 570px) {
+
+    #popup-close,
+    #popup-open {
         display: none;
     }
 }

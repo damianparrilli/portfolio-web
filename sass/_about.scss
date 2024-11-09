@@ -148,6 +148,7 @@
 
     &__img {
         max-width: 5.125em;
+        width: 100%;
         @media (max-width: 900px) {
         
             transform: rotateX(180deg);
@@ -162,15 +163,23 @@
 
 .card:hover .front {
     
-    @media (min-width: 900px) {
+    @media (min-width: 900px) and (max-width: 2100px) {
         transform: perspective(600px) rotateY(180deg);
+    }
+
+    @media (min-width: 2100px) {
+        transform: perspective(4000px) rotateY(180deg);
     }
 }
 
 .card:hover .back {
     
-    @media (min-width: 900px) {
+    @media (min-width: 900px) and (max-width: 2100px) {
         transform: perspective(600px) rotateY(360deg);
+    }
+
+    @media (min-width: 2100px) {
+        transform: perspective(4000px) rotateY(360deg);
     }
 }
 

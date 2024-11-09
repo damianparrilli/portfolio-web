@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         section.classList.remove('lazy');
       }
     });
+    document.body.style.pointerEvents = "auto";
   }, 1000);
 
 
