@@ -290,7 +290,7 @@ if (!userLanguage.startsWith('es')) {
   const cvBack = document.querySelector('.back__texto__button');
   telefonoBack.innerHTML = `<b>Phone:</b> +54 1160518730`;
   cvBack.innerHTML = `My CV`;
-  cvBack.setAttribute('href', 'https://drive.google.com/file/d/1T0klvx6J2wQWSxFGcLBIMgQIJSCY1VdF/view?usp=sharing');
+  cvBack.setAttribute('href', 'https://drive.google.com/file/d/1JEBJJaP-iBpOOlxJwlGmlGuh_3bYTmwh/view?usp=sharing');
 
   const aboutDescription = document.querySelector('.about-descripcion');
   aboutDescription.textContent = `Graduate in Multimedia Design. I am passionate about the design and development of web interfaces, and I am looking to grow by acquiring new knowledge that allows for greater professional development. I am interested in the creation of web platforms as a solution to user experience problems, with the commitment to generate functional, innovative and efficient interfaces. I have teamwork skills and adaptability to change. I am prepared to face new challenges that allow me to continue advancing in my professional career.`;
@@ -330,16 +330,18 @@ if (!userLanguage.startsWith('es')) {
                         <div class="experiencia__individual">
                             <h3>Web Design and Front-end Development (Projects)</h3>
                             <p>Freelance</p>
-                            <p>april 2024 - may 2024</p>
-                            <p>B&B Racing Parts</p>
+                            <p>april 2024 - Current</p>
+                            <p>B&B Racing Parts (April 2024 - May 2024)</p>
                             <ul>
                                 <li>I have done the interface design of a OnePage WebApp, including Login and Filter System. The design was made with Figma. (April 2024) </li>
                                 <li>I developed an iframe with HTML for the interactive description of Ebay products. (May 2024)</li>
                             </ul>
-                            <p>Bonté Deco</p>
+                            <p>Bonté Deco (Sept. 2024 - Current)</p>
                             <ul>
-                                <li>I designed the whole website with Figma. (Sept. 2024)</li>
-                                <li>developed the website with Astro, TailwindCSS and TypeScript/JS. (Oct. - Current)</li>
+                                <li>I designed the whole website with Figma.</li>
+                                <li>I developed the website with Astro, TailwindCSS and TypeScript/JS.</li>
+                                <li>I implemented SEO using corresponding tags and OpenGraph.</li>
+                                <li>I design and generate dynamic pages using Restful API.</li>
                             </ul>
                         </div>
                         `
@@ -388,7 +390,7 @@ if (!userLanguage.startsWith('es')) {
   bonteh3.textContent = `Design and web building - Responsive and Mobile First`;
 
   const bonteDescription = document.getElementById('bonte-description');
-  bonteDescription.textContent = `A landing page for Bonté, an interior decoration company. It shows their main products, their catalog with a variety of products, a FAQ section and a functional contact with Netlify Forms. This page was made with Astro, TailwindCSS, JavaScript/TypeScript, and the Preline UI and TAOS (Tailwind Animate on Scroll) libraries.`;
+  bonteDescription.innerHTML = `A landing page for Bonté, an interior decoration company. It shows their main products, their catalog with a variety of products, a FAQ section and a functional contact with Netlify Forms.<br>This page was made with Astro, TailwindCSS, JavaScript/TypeScript, and Preline UI and TAOS (Tailwind Animate on Scroll) libraries. It also has SEO implementation, as well as dynamic page design with API Restful.`;
 
   const webapph3 = document.getElementById('webapph3');
   webapph3.textContent = `Web Design Desktop`;
@@ -423,7 +425,7 @@ It includes Login design, One Page main platform and the filter system.`;
 
 
   const contactoCvLink = document.getElementById('contacto-cv-link');
-  contactoCvLink.setAttribute('href', 'https://drive.google.com/file/d/1T0klvx6J2wQWSxFGcLBIMgQIJSCY1VdF/view?usp=sharing');
+  contactoCvLink.setAttribute('href', 'https://drive.google.com/file/d/1JEBJJaP-iBpOOlxJwlGmlGuh_3bYTmwh/view?usp=sharing');
   contactoCvLink.innerHTML = `Open CV
                                 <svg viewBox="0 0 428 428" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path

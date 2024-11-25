@@ -44,7 +44,12 @@
                 padding: 10px 25px;
             }
 
-            & a {
+            &:not(:last-child) a{
+                margin: 10px 0;
+                background: transparent;
+            }
+
+            &:last-child a {
                 text-decoration: none;
                 color: manager.$secondary-color;
                 height: min-content;

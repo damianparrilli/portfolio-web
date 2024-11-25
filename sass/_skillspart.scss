@@ -112,14 +112,14 @@
     &__lista {
         @include listas-habilidades();
         gap: 20px;
-        @for $iterador from 1 through 8 {
+        @for $iterador from 1 through 6 {
             & > :nth-child(#{$iterador}) {
-              @if $iterador <= 4 {
+              @if $iterador <= 3 {
                 grid-column: 1;
                 grid-row: $iterador;
               } @else {
                 grid-column: 2;
-                grid-row: $iterador - 4;
+                grid-row: $iterador - 3;
               }
             }
           }
